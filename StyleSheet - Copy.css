@@ -1,0 +1,411 @@
+﻿body {
+    background: linear-gradient(rgba(198,156,193,0.95),rgba(241,235,240,0.83));
+    background-position: center;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-backface-visibility: hidden;
+    display:block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero {
+    height: 100%;;
+    font-family: sans-serif;
+}
+
+.menubar .bg-dark{
+    background-color:transparent;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+
+
+.main-img {
+left: 590px;
+    position: absolute;    
+    animation-name: example2;
+    animation-duration: 3s;
+    animation-direction: alternate-reverse;
+    animation-delay: -2s;
+    animation-iteration-count: infinite;
+}
+
+.menubar ul li {
+    width: 60%;
+    margin: 15px;
+    padding: 15px;
+}
+
+
+
+.info {
+    margin-left: 8%;
+    margin-top: 15%;
+}
+
+    .info h1 {
+        font-size: 50px;
+        color: #212121;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+span {
+    color: #ff4321;
+}
+
+
+.info p {
+    color: #606163;
+    line-height: 22px;
+    text-align: left;
+}
+
+.info a {
+    background: #212121;
+    padding: 10px 18px;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    margin: 30px 0;
+    border-radius: 5px;
+}
+
+.img-box {
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+
+
+
+
+    .menubar ul {
+        display: flex;
+        list-style-type: none;
+    }
+
+        .menubar ul li a {
+            text-decoration: none;
+            color: dimgray;
+        }
+
+        .menubar ul li:hover {
+            background-color: lightpink;
+            border-radius: 13px;
+        }
+
+
+    .menubar .fa-solid {
+        margin-right: 15px;
+    }
+
+.sub-menu1 {
+    display: none;
+    position: absolute;
+    background-color: lightpink;
+    width: 12%;
+    z-index: 1;
+    box-shadow: 10px 10px 8px 4px black;
+}
+
+.menubar ul li:hover .sub-menu1 {
+    display: block;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: -15px;
+    overflow: visible;
+    visibility: visible;
+    border: 3px solid lightpink;
+    border-radius: 20px;
+}
+
+    .menubar ul li:hover .sub-menu1 ul {
+        display: block;
+        margin: 10px;
+    }
+
+.sub-menu2 {
+    display: none;
+    box-shadow: 10px 10px 8px 4px black;
+}
+
+.fa-sharp {
+    float: right;
+}
+
+.hover-me:hover .sub-menu2 {
+    position: absolute;
+    display: block;
+    margin-top: -40px;
+    margin-left: 140px;
+    background-color: dimgray;
+    border: 3px solid dimgray;
+    border-radius: 33px;
+    white-space: nowrap;
+    width: 320px;
+}
+
+    .hover-me:hover .sub-menu2 li a {
+        color: white;
+        font-weight: bold;
+    }
+
+.menubar ul li:hover .sub-menu1 ul li {
+    width: 130px;
+    border-radius: 0;
+    text-align: left;
+    border-radius: 23px;
+}
+
+.menubar ul li:hover .sub-menu1 .sub-menu2 ul li {
+    width: 270px;
+    text-align: left;
+}
+
+.menubar ul li:hover .sub-menu1 ul li:last-child {
+    border-bottom: none;
+}
+
+.menubar ul li:hover .sub-menu1 ul li a:hover {
+    color: forestgreen;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menubar ul li:hover .sub-menu1 .sub-menu2 li a:hover {
+    color: #fff;
+    font-size: 14px;
+}
+
+.navbar a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.subnav {
+    float: left;
+    overflow: hidden;
+}
+
+    .subnav .subnavbtn {
+        border: none;
+        outline: none;
+        color: black;
+        padding: 14px 16px;
+        margin: 0;
+    }
+
+.fa-solid {
+    margin-right: 15px;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+    background-color: lightpink;
+}
+
+.subnav-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: lightpink;
+    width: 100%;
+    z-index: 1;
+}
+
+    .subnav-content a {
+        float: left;
+        color: dimgray;
+        text-decoration: none;
+    }
+
+        .subnav-content a:hover {
+            background-color: #eee;
+            color: black;
+        }
+
+.subnav:hover .subnav-content {
+    display: block;
+}
+
+
+.back-img {
+    height: 100%;
+    position: absolute;
+    left: 30%;
+    bottom: 0;
+    width: 45%;
+    right: 200px;
+    position: absolute;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-direction: alternate-reverse;
+    animation-delay: -2s;
+    animation-iteration-count: infinite;
+    /* transform: translateX(-30%);
+            transition: bottom 1s, left 1s;      */
+}
+/*  .img-box:hover  .back-img{
+        bottom:60px;
+
+    }     
+
+    .img-box:hover .main-img{
+        left:54%;
+
+    }       */
+
+@keyframes example {
+    from {
+        bottom: 0px;
+    }
+
+    to {
+        bottom: 100px;
+    }
+}
+
+@keyframes example2 {
+    from {
+        left: 430px;
+    }
+
+    to {
+        left: 290px;
+    }
+}
+
+
+
+    .social-links a {
+        font-size: 30px;
+        color: #181616;
+        margin-right: 20px;
+        padding: 5px 5px;
+        background: transparent;
+    }
+
+        .social-links a:hover {
+            color: #ff4321;
+        }
+    @media (max-width: 1100px)   {
+    .menubar {
+       
+        font-size: 12px;
+        margin: -20px -20px -20px -0px;
+    }
+
+        .menubar ul {
+            display:block;
+            list-style-type: none;
+        }
+
+        .info{
+            font-size:10px;
+
+        }
+
+        .info h1{
+            font-size:15px;
+        }
+
+        .img-box img {
+            height: 50%;
+            position: absolute;
+            left: 0%;
+            top: 660px;
+            animation-name: example;
+            animation-duration: 3s;
+            animation-direction: alternate-reverse;
+            animation-delay: -2s;
+            animation-iteration-count: infinite;
+        }
+
+        .img-box .main-img {
+            /* margin-right: -50px; */
+            margin-left: -220px;
+            animation-name: example2;
+            animation-duration: 3s;
+            animation-direction: alternate-reverse;
+            animation-delay: -2s;
+            animation-iteration-count: infinite;
+        }
+
+
+        @keyframes example2 {
+            from {
+                margin-left:-420px;
+            }
+
+            to {
+                margin-left:-480px;
+            }
+        }
+
+
+
+        @keyframes example {
+            from {
+                top: 660px;
+            }
+
+            to {
+                top: 630px;
+            }
+        }
+
+        .social-links {
+            margin-left: 72%;
+            margin-top: -70px;
+        }
+
+        .navbar a:hover, .subnav:hover .subnavbtn {
+            background-color: lightpink;
+        }
+
+       
+
+        .menubar ul li:hover .sub-menu1 {
+            display: block;
+            position: absolute;
+            margin-top: 15px;
+            margin-left: -15px;
+            overflow: visible;
+            visibility: visible;
+            border: 3px solid lightpink;
+            border-radius: 20px;
+            width: 60%;
+            z-index: 1;
+        }
+
+        .hover-me .sub-menu1:hover  .sub-menu2 {
+            position: absolute;
+            display: block;
+            margin-top: -40px;
+            margin-left: 140px;
+            background-color: dimgray;
+            border: 3px solid dimgray;
+            border-radius: 33px;
+            white-space: nowrap;
+            width: 220px;
+            z-index: 1;
+        }
+
+      
+     
+}

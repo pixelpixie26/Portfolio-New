@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <script src="music-list.js" defer></script>
+    <script src="musicapp.js" defer></script>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,500;1,700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: 0;
+      }
+      :root {
+        --background: #141414;
+        --text-color: #fff;
+        --primary-color: #f4caf5;
+        --alpha-color: rgba(0, 0, 0, 0.5);
+        --shadow: 0 15px 40px var(--alpha-color);
+      }
+
+      html {
+        background: var(--background);
+        display: flex;
+        justify-content: center;
+      }
+
+      body {
+        width: 100%;
+        height: 100%;
+        max-width: 375px;
+        position: relative;
+        background: var(--background);
+        font-family: "roboto", sans-serif;
+        color: var(--text-color);
+      }
+
+      .instructions {
+        position: absolute;
+        left: -430px;
+      }
+
+      /*HIDE SCROLLBAR*/
+
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      /*Home section*/
+
+      .home-section {
+        width: 100%;
+        padding: 5px;
+        padding-bottom: 100px;
+        height: 100%;
+        overflow-y: auto;
+      }
+
+      /*----------CAROUSEL-------*/
+
+      .carousel {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: var(--shadow);
+        position: relative;
+      }
+
+      .carousel img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: 1s ease-in-out;
+      }
+
+      .carousel img.active {
+        opacity: 1;
+      }
+
+      .heading {
+        margin: 30px 0 10px;
+        text-transform: capitalize;
+        font-weight: 400;
+        font-size: 30px;
+      }
+
+      /*-----------playlists card--------------*/
+
+      .playlists-group {
+        position: relative;
+        width: 100%;
+        min-width: 100px;
+        min-height: 200px;
+        height: auto;
+        display: flex;
+        overflow-x: auto;
+        object-fit: cover;
+      }
+
+      .playlist-card {
+        flex: 0 0 auto;
+        max-width: 180px;
+        height: 120%;
+        margin-right: 13px;
+        margin-bottom: 32px;
+      }
+
+      .playlist-card-img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 20px;
+      }
+
+      .playlist-card-name {
+        width: 100%;
+        text-align: justify;
+        font-size: 20px;
+        text-transform: capitalize;
+        padding: 5px;
+      }
+
+      /*----Music Player--- */
+
+      /*Minimize View */
+
+      .music-player-section {
+        width: 100%;
+        height: 130px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background: var(--alpha-color);
+        backdrop-filter: blur(50px);
+        transition: 1s;
+      }
+
+      .music-seek-bar {
+        -webkit-appearance: none;
+        width: 100%;
+        position: absolute;
+        top: 4px;
+        height: 8px;
+        background: var(--secondary-color);
+        overflow: hidden;
+      }
+
+      .music-seek-bar::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        height: 10px;
+        width: 5px;
+        background: var(--primary-color);
+        cursor: pointer;
+        box-shadow: -400px 0 0 400px var(--primary-color);
+      }
+
+      .current-song-name {
+        font-weight: 300;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 30px;
+        text-transform: capitalize;
+      }
+
+      .controls {
+        position: relative;
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        font-size: 30px;
+      }
+      .controls span {
+        display: none;
+        opacity: none;
+        transition: 1s;
+      }
+      .music-player-section.active .controls {
+        justify-content: space-between;
+      }
+
+      .music-player-section.active .controls span {
+        font-size: 25px;
+        display: block;
+        opacity: 0.5;
+      }
+
+      .music-player-section.active .controls span.active {
+        color: var(--primary-color);
+        opacity: 1;
+      }
+
+      .controls .main i {
+        margin: 0 5px;
+        display: none;
+      }
+
+      .controls .main i.active {
+        display: inline;
+      }
+
+      /*-------MAXIMIZE MUSIC PLAYER STYLES-------------*/
+
+      .music-player-section .hide {
+        display: none;
+        opacity: 0;
+        transition: 1s;
+      }
+      .music-player-section.active .hide {
+        display: block;
+        opacity: 1;
+      }
+
+      .music-player-section.active {
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .music-player-section.active .music-seek-bar {
+        position: relative;
+        display: block;
+        border-radius: 50px;
+        margin: auto;
+      }
+
+      .music-player-section.active .current-song-name {
+        font-size: 30px;
+      }
+
+      .music-player-section.active .controls {
+        font-size: 30px;
+      }
+
+      .artist-name {
+        text-align: center;
+        font-size: 20px;
+        text-transform: capitalize;
+      }
+
+      .cover {
+        width: 30vh;
+        height: vh;
+        object-fit: cover;
+        margin: auto;
+        border-radius: 10px;
+        box-shadow: var(--shadow);
+      }
+
+      .current-time {
+        position: absolute;
+        margin-top: 5px;
+        left: 30px;
+      }
+
+      .duration {
+        position: absolute;
+        margin-top: 5px;
+        right: 30px;
+      }
+
+      .icon {
+        position: absolute;
+        top: 70px;
+        transform: scale(1.3);
+      }
+
+      .back-btn {
+        left: 20px;
+      }
+      .nav-btn {
+        right: 30px;
+      }
+
+      /*--------VOLUME BUTTON----------------*/
+
+      .volume-slider {
+        -webkit-appearance: none;
+        width: 100px;
+        position: absolute;
+        right: -35px;
+        bottom: 88px;
+        transform: rotate(-90deg);
+        border-radius: 25px;
+        background: var(--primary-color);
+        overflow: hidden;
+        accent-color: red;
+        box-shadow: 10px 10px 70px 20px var(--alpha-color);
+        opacity: 0;
+        display: none;
+      }
+
+      .volume-slider.active {
+        opacity: 1;
+        display: block;
+      }
+
+      .volume-slider .active::-webkit-slider-thumb {
+        opacity: 1;
+        display: block;
+      }
+
+      /*---------PLAYLIST SECTION---------------*/
+
+      .playlist {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        padding: 30px 0;
+        background: var(--background);
+        z-index: 3;
+        transition: 1s;
+        overflow: auto;
+      }
+
+      .playlist.active {
+        right: 0;
+      }
+
+      .title {
+        font-weight: 300;
+        font-size: 30px;
+        text-align: center;
+        margin-top: 30px;
+        text-transform: capitalize;
+        margin-bottom: 30px;
+      }
+
+      .queue {
+        width: 100%;
+        height: 80px;
+        padding: 0 30px;
+        display: flex;
+        align-items: center;
+        border-top: 2px solid var(--alpha-color);
+      }
+      .queue-cover {
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-right: 20px;
+        position: relative;
+      }
+
+      .queue-cover img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .queue-cover i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 30px;
+        color: var(--primary-color);
+        display: none;
+      }
+
+      .queue.active i {
+        display: block;
+      }
+
+      .queue .name {
+        font-size: 22px;
+        text-transform: capitalize;
+      }
+
+      footer {
+        position: absolute;
+        top: 100%;
+        left: 30%;
+        font-size: 10px;
+        color: var(--primary-color);
+      }
+
+      .f1 {
+        position: absolute;
+        top: 880px;
+        left: 30%;
+        font-size: 10px;
+        color: var(--primary-color);
+        z-index: 100;
+      }
+    </style>
+  </head>
+  <body>
+    <audio src="" id="audio-source" preload="loadedmetadata" loop></audio>
+
+    <h1 class="instructions">Check this App on iphoneX</h1>
+    <!------------Home Section-------------->
+    <section class="home-section">
+      <!---------------Carousel--------------->
+
+      <div class="carousel">
+        <img src="images/music-1.jpg" class="active" alt="" />
+        <img src="images/music-2.jpg" alt="" />
+        <img src="images/music-3.jpg" alt="" />
+        <img src="images/music-4.jpg" alt="" />
+        <img src="images/music-5.jpg" alt="" />
+        <img src="images/music-6.jpg" alt="" />
+      </div>
+
+      <!-----PlayList--------------------------->
+
+      <h1 class="heading">recently played</h1>
+      <div class="playlists-group">
+        <div class="playlist-card">
+          <img src="images/music-3.jpg" class="playlist-card-img" alt="" />
+          <p class="playlist-card-name">top international</p>
+        </div>
+
+        <div class="playlist-card">
+          <img src="images/isha.jpg" class="playlist-card-img" alt="" />
+          <p class="playlist-card-name">Isha's Collection</p>
+        </div>
+
+        <div class="playlist-card">
+          <img src="images/cover 10.png" class="playlist-card-img" alt="" />
+          <p class="playlist-card-name">Wedding Hits</p>
+        </div>
+
+        <div class="playlist-card">
+          <img src="images/cover 11.png" class="playlist-card-img" alt="" />
+          <p class="playlist-card-name">top 50</p>
+        </div>
+
+        <div class="playlist-card">
+          <img src="images/cover 5.png" class="playlist-card-img" alt="" />
+          <p class="playlist-card-name">Taylor Swift</p>
+        </div>
+      </div>
+
+      <h1 class="heading">based on your listening</h1>
+      <div class="playlists-group">
+        <div class="playlist-card">
+          <img src="images/music-4.jpg" class="playlist-card-img" alt="" />
+          <p class="playlist-card-name">top international</p>
+        </div>
+
+        <div class="playlist-card">
+          <img src="images/cover 12.png" class="playlist-card-img" alt="" />
+          <p class="playlist-card-name">Isha's Collection</p>
+        </div>
+
+        <div class="playlist-card">
+          <img src="images/cover 13.png" class="playlist-card-img" alt="" />
+          <p class="playlist-card-name">Wedding Hits</p>
+        </div>
+
+        <div class="playlist-card">
+          <img src="images/music-6.jpg" class="playlist-card-img" alt="" />
+          <p class="playlist-card-name">top 50</p>
+        </div>
+
+        <div class="playlist-card">
+          <img src="images/music-3.jpg" class="playlist-card-img" alt="" />
+          <p class="playlist-card-name">Taylor Swift</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="music-player-section">
+      <img src="images/back.png" alt="" class="back-btn icon hide" />
+      <img src="images/nav.png" alt="" class="nav-btn icon hide" />
+
+      <h1 class="current-song-name">Harley Bird - Home</h1>
+      <p class="artist-name hide">Jordan Schor</p>
+      <img src="images/music-1.jpg" class="cover hide" alt="" />
+      <div class="seek-bar-container">
+        <input type="range" class="music-seek-bar" value="0" />
+        <p class="current-time hide">00:00</p>
+        <p class="duration hide">00:00</p>
+      </div>
+
+      <div class="controls">
+        <span class="fas fa-redo"></span>
+        <div class="main">
+          <i class="fas fa-backward active"></i>
+          <i class="fas fa-play active"></i>
+          <i class="fas fa-pause"></i>
+          <i class="fas fa-forward active"></i>
+        </div>
+
+        <input
+          type="range"
+          class="volume-slider"
+          max="1"
+          value="1"
+          step="0.1"
+        />
+        <span class="fas fa-volume-up"></span>
+      </div>
+    </section>
+
+    <section class="playlist">
+      <img src="images/back.png" alt="" class="back-btn icon" />
+
+      <h1 class="title">playlist</h1>
+
+      <div class="queue active">
+        <div class="queue-cover">
+          <img src="images/music-1.jpg" class="queueImage" alt="" />
+          <i class="fas fa-pause active"></i>
+        </div>
+        <p class="name">Harley Bird - Home</p>
+      </div>
+
+      <div class="queue">
+        <div class="queue-cover">
+          <img src="images/music-2.jpg" class="queueImage" alt="" />
+          <i class="fas fa-pause"></i>
+        </div>
+        <p class="name">Ikson Anywhere – Ikson</p>
+      </div>
+
+      <div class="queue">
+        <div class="queue-cover">
+          <img src="images/music-3.jpg" class="queueImage" alt="" />
+          <i class="fas fa-pause"></i>
+        </div>
+        <p class="name">Beauz & Jvna - Crazy</p>
+      </div>
+
+      <div class="queue">
+        <div class="queue-cover">
+          <img src="images/music-4.jpg" class="queueImage" alt="" />
+          <i class="fas fa-pause"></i>
+        </div>
+        <p class="name">Hardwind - Want Me</p>
+      </div>
+
+      <div class="queue">
+        <div class="queue-cover">
+          <img src="images/music-5.jpg" class="queueImage" alt="" />
+          <i class="fas fa-pause"></i>
+        </div>
+        <p class="name">Jim - Sun Goes Down</p>
+      </div>
+
+      <div class="queue">
+        <div class="queue-cover">
+          <img src="images/music-6.jpg" class="queueImage" alt="" />
+          <i class="fas fa-pause"></i>
+        </div>
+        <p class="name">Lost Sky - Vision NCS</p>
+      </div>
+    </section>
+  </body>
+</html>

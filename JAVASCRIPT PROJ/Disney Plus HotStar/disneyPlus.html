@@ -1,0 +1,3443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney + JavaScript Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"
+    />
+
+    
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css"
+    />
+    <script  src="script.js" defer async></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js" ></script>
+
+</head>
+<body>
+
+    <!-------------NAVIGATION BAR------------->
+   <nav class="navBar">
+    <img src="images/logo.png" class="brandLogo" alt="">
+    <ul class="navLinks">
+        <li class="navItems">
+            <a href="#">TV</a>
+        </li>
+        <li class="navItems">
+            <a href="#">Movies</a>
+        </li> <li class="navItems">
+            <a href="#">Sports</a>
+        </li> <li class="navItems">
+            <a href="#">Premium</a>
+        </li>
+    </ul>
+
+    <div class="rightContainer">
+        <input type="text" name="" id="" placeholder="Search" class="searchBox">
+        <button class="subBtn">Subscribe</button>
+        <a href="#" class="loginLink">Login</a>
+
+    </div>
+   </nav> 
+
+
+   <!-------------------------MIDDLE SLIDER-------------------->
+
+   <div class="carouselContainer">
+    <div class="carousel">
+        <!----Adding all the sliding content thru Javascript-->
+
+     <!--    <div class="carouselSlider">
+            <div class="content">
+                <h1 class="moviesTitle"> Wanda Vision </h1>
+                <p class="moviesDescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis recusandae veniam consectetur ipsam suscipit consequuntur.</p>
+
+            </div>
+
+            <img src="images/slider 2.PNG" alt="">
+        </div> -->
+     </div>
+   </div>
+
+
+   <!--VIDEO CARD -->
+   <div class="video-section-main">
+    <div class="videoCard">
+        <img src="images/disney.PNG" class="videoCardImage" alt="">
+        <video src="videos/disney.mp4"  loop class="video"></video>
+    </div>
+    <div class="videoCard">
+        <img src="images/pixar.PNG" class="videoCardImage" alt="">
+        <video src="videos/pixar.mp4"  loop class="video"></video>
+    </div>
+    <div class="videoCard">
+        <img src="images/marvel.PNG" class="videoCardImage" alt="">
+        <video src="videos/marvel.mp4"  loop class="video"></video>
+    </div>
+    <div class="videoCard">
+        <img src="images/star-wars.PNG" class="videoCardImage" alt="">
+        <video src="videos/star-war.mp4"  loop class="video"></video>
+    </div>
+    <div class="videoCard">
+        <img src="images/geographic.PNG" class="videoCardImage" alt="">
+        <video src="videos/geographic.mp4"  loop class="video"></video>
+    </div>
+</div>
+
+<!--Movies/shows image card slider 3rd section----------->
+
+<!-- <h1 class="recommendedTitle">Recommended For You</h1>
+<div class="moviesList">
+    <button class="previousBtn" title="btn">
+
+        <i class="fa fa-arrow-left" ></i>
+    </button>
+    <button class="nextBtn" title="btn">
+
+        <i class="fa fa-arrow-right" ></i>
+    </button>
+<div class="cardContainer">
+    <div class="card">
+
+    <img src="images/poster 1.png" alt="" class="cardImage">
+    <div class="cardBody">
+        <h2 class="movieName">Movie Name</h2>
+        <h6 class="description">Lorem ipsum dolor sit amet.</h6>
+        <button class="addToWatchlist">Add to watchlist</button>
+    </div>
+</div> 
+
+</div>
+</div> -->
+<!---RECOMMENDED FOR YOU-->
+<h1 class="title">recommended for you</h1>
+    <div class="movies-list">
+        <button class="pre-btn"><img src="images/pre.png" alt=""></button>
+        <button class="nxt-btn"><img src="images/nxt.png" alt=""></button>
+        <div class="card-container">
+            <div class="card">
+                <img src="images/poster 1.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+            <div class="card">
+                <img src="images/poster 2.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 3.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 4.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 5.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 6.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 7.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 8.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 9.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 10.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 11.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 12.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 1.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+            <div class="card">
+                <img src="images/poster 2.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 3.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 4.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 5.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 6.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 7.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 8.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 9.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 10.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 11.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 12.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 1.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+            <div class="card">
+                <img src="images/poster 2.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 3.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 4.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 5.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 6.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 7.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 8.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 9.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 10.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 11.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 12.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 1.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+            <div class="card">
+                <img src="images/poster 2.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 3.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 4.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 5.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 6.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 7.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 8.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 9.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 10.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 11.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 12.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+            <div class="card">
+                <img src="images/poster 1.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+            <div class="card">
+                <img src="images/poster 2.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 3.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 4.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 5.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 6.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 7.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 8.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 9.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 10.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 11.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 12.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+            <div class="card">
+                <img src="images/poster 1.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+            <div class="card">
+                <img src="images/poster 2.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 3.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 4.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 5.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 6.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 7.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 8.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 9.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 10.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 11.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 12.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+            <div class="card">
+                <img src="images/poster 1.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+            <div class="card">
+                <img src="images/poster 2.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 3.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 4.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 5.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 6.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 7.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 8.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 9.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 10.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 11.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 12.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+            <div class="card">
+                <img src="images/poster 1.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+            <div class="card">
+                <img src="images/poster 2.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 3.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 4.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 5.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 6.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 7.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 8.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 9.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 10.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 11.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 12.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+            <div class="card">
+                <img src="images/poster 1.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+            <div class="card">
+                <img src="images/poster 2.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 3.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 4.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 5.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 6.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 7.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 8.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 9.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 10.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 11.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 12.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+            <div class="card">
+                <img src="images/poster 1.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+            <div class="card">
+                <img src="images/poster 2.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 3.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 4.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 5.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 6.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 7.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 8.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 9.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 10.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 11.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 12.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+            <div class="card">
+                <img src="images/poster 1.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+            <div class="card">
+                <img src="images/poster 2.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 3.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 4.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 5.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 6.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 7.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 8.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 9.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 10.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 11.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 12.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+            <div class="card">
+                <img src="images/poster 1.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+            <div class="card">
+                <img src="images/poster 2.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 3.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 4.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 5.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 6.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 7.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 8.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 9.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 10.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 11.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 12.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+            <div class="card">
+                <img src="images/poster 1.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+            <div class="card">
+                <img src="images/poster 2.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 3.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 4.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 5.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 6.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 7.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 8.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 9.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 10.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 11.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 12.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+            <div class="card">
+                <img src="images/poster 1.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+            <div class="card">
+                <img src="images/poster 2.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 3.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 4.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 5.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 6.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 7.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 8.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 9.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 10.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 11.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 12.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+            <div class="card">
+                <img src="images/poster 1.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+            <div class="card">
+                <img src="images/poster 2.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 3.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 4.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 5.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 6.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 7.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 8.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 9.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 10.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 11.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            <div class="card">
+                <img src="images/poster 12.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> 
+
+            
+        </div>
+   </div>
+
+   <!---RECOMMENDED FOR YOU-->
+<h1 class="title">Popular shows</h1>
+<div class="movies-list">
+    <button class="pre-btn"><img src="images/pre.png" alt=""></button>
+    <button class="nxt-btn"><img src="images/nxt.png" alt=""></button>
+    <div class="card-container">
+        <div class="card">
+            <img src="images/poster 12.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+        <div class="card">
+            <img src="images/poster 11.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 10.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 9.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 8.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 7.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 6.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 5.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 4.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 3.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 2.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 1.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 12.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+        <div class="card">
+            <img src="images/poster 11.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 10.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 9.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 8.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 7.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 6.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 5.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 4.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 3.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 2.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 1.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+        <div class="card">
+            <img src="images/poster 12.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+        <div class="card">
+            <img src="images/poster 11.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 10.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 9.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 8.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 7.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 6.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 5.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 4.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 3.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 2.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 1.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+        <div class="card">
+            <img src="images/poster 12.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+        <div class="card">
+            <img src="images/poster 11.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 10.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 9.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 8.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 7.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 6.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 5.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 4.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 3.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 2.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 1.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+        <div class="card">
+            <img src="images/poster 12.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+        <div class="card">
+            <img src="images/poster 11.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 10.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 9.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 8.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 7.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 6.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 5.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 4.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 3.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 2.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 1.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+        <div class="card">
+            <img src="images/poster 12.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+        <div class="card">
+            <img src="images/poster 11.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 10.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 9.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 8.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 7.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 6.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 5.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 4.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 3.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 2.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 1.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+        <div class="card">
+            <img src="images/poster 12.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+        <div class="card">
+            <img src="images/poster 11.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 10.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 9.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 8.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 7.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 6.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 5.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 4.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 3.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 2.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 1.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+        <div class="card">
+            <img src="images/poster 12.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+        <div class="card">
+            <img src="images/poster 11.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 10.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 9.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 8.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 7.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 6.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 5.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 4.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 3.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 2.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 1.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+        <div class="card">
+            <img src="images/poster 12.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+        <div class="card">
+            <img src="images/poster 11.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 10.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 9.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 8.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 7.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 6.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 5.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 4.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 3.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 2.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 1.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+        <div class="card">
+            <img src="images/poster 12.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+        <div class="card">
+            <img src="images/poster 11.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 10.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 9.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 8.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 7.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 6.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 5.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 4.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 3.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 2.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 1.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+        <div class="card">
+            <img src="images/poster 12.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+        <div class="card">
+            <img src="images/poster 11.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 10.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 9.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 8.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 7.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 6.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 5.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 4.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 3.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 2.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 1.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+        <div class="card">
+            <img src="images/poster 12.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+        <div class="card">
+            <img src="images/poster 11.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 10.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 9.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 8.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 7.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 6.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 5.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 4.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 3.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 2.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 1.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+        <div class="card">
+            <img src="images/poster 12.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+        <div class="card">
+            <img src="images/poster 11.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 10.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 9.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 8.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 7.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 6.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 5.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 4.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 3.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 2.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 1.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+        <div class="card">
+            <img src="images/poster 12.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+        <div class="card">
+            <img src="images/poster 11.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 10.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 9.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 8.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 7.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 6.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 5.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 4.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 3.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 2.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 1.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+        <div class="card">
+            <img src="images/poster 12.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+        <div class="card">
+            <img src="images/poster 11.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 10.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 9.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 8.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 7.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 6.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 5.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 4.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 3.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 2.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 1.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+        <div class="card">
+            <img src="images/poster 12.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+        <div class="card">
+            <img src="images/poster 11.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 10.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 9.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 8.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 7.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 6.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 5.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 4.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 3.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 2.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        <div class="card">
+            <img src="images/poster 1.png" class="card-img" alt="">
+            <div class="card-body">
+                <h2 class="name">movie name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+            </div>
+        </div> 
+
+        
+    </div>
+</div>
+<footer>Page Created By:Isha Desai Crowthers @2023</footer>
+<footer>Languages Used : HTML,CSS,Javascript</footer>
+</body>
+</html>

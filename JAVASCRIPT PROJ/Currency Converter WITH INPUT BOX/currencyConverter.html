@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+
+    <!--NOTE: LISTS OF DATA FILES ALWAYS GOES BEFORE MAIN JS FILE-->
+    <script src="countriesList.js" defer></script>
+    <script src="script.js" defer></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 0 10px;
+        background: linear-gradient(rgb(133, 91, 133), rgb(242, 209, 242));
+      }
+      ::selection {
+        color: #fff;
+        background: purple;
+      }
+      .container {
+        width: 370px;
+        padding: 30px;
+        border-radius: 17px;
+        background: #f2e4f0;
+        box-shadow: inset 0px 0px 20px 5px rgba(0, 0, 0, 0.4);
+      }
+      .container header {
+        font-size: 28px;
+        font-weight: 500;
+        text-align: center;
+      }
+      .container form {
+        margin: 40px 0 20px 0;
+      }
+      form :where(input, select, button) {
+        width: 100%;
+        outline: none;
+        border-radius: 5px;
+        border: none;
+      }
+      form p {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+      form input {
+        height: 50px;
+        font-size: 17px;
+        padding: 0 15px;
+        border: 1px solid #999;
+      }
+      form input:focus {
+        padding: 0 14px;
+        border: 2px solid #f95afe;
+      }
+      form .dropList {
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .dropList .selectBox {
+        display: flex;
+        width: 115px;
+        height: 45px;
+        align-items: center;
+        border-radius: 5px;
+        justify-content: center;
+        border: 1px solid #999;
+        background: #bca8e1;
+      }
+      .selectBox img {
+        max-width: 21px;
+      }
+      .selectBox select {
+        width: auto;
+        font-size: 16px;
+        background: none;
+        margin: 0 -5px 0 5px;
+      }
+      .selectBox select::-webkit-scrollbar {
+        width: 8px;
+      }
+      .selectBox select::-webkit-scrollbar-track {
+        background: #fff;
+      }
+      .selectBox select::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 8px;
+        border-right: 2px solid #ffffff;
+      }
+      .dropList .icon {
+        cursor: pointer;
+        margin-top: 30px;
+        font-size: 22px;
+      }
+      form .exchangeRate {
+        font-size: 15px;
+        margin: 20px 0 30px;
+        text-transform: capitalize;
+      }
+
+      form .exchangeRate1 {
+        font-size: 15px;
+        margin: 20px 0 30px;
+        text-transform: capitalize;
+      }
+      form button {
+        height: 52px;
+        color: #fff;
+        font-size: 17px;
+        cursor: pointer;
+        background: rgb(130, 22, 130);
+        box-shadow: 10px 10px 120px 5px rgba(88, 85, 85, 0.2);
+        border-radius: 17px;
+        transition: 0.3s ease;
+      }
+      form button:hover {
+        background: #f945ae;
+      }
+
+     
+    
+      footer {
+        position: absolute;
+        display: flex;
+        top: 100%;
+        color: white;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>Isha's Currency Converter With Input Box</header>
+      <form action="#">
+        <div class="amount">
+          <small>Enter Amount: </small>
+          <input type="text " value="1" />
+        </div>
+        <div class="dropList">
+          <div class="From">
+            <small>From</small>
+            <div class="selectBox">
+              
+              <img src="https://flagcdn.com/16x12/in.png" alt="" />
+              <input placeholder="Ex: INR">
+                <!--     <option value="INR">INR</option>
+                <option value="CAD">CAD</option>
+                <option value="AUD">AUD</option>
+                <option value="GBP">GBP</option>
+                <option value="USD">USD</option>
+                <option value="NPR">NPR</option>
+ -->
+</input>
+
+            </div>
+          </div>
+
+          <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+          <div class="To">
+            <small>To</small>
+            <div class="selectBox">
+              <img src="https://flagcdn.com/16x12/ca.png" alt="" />
+              <input placeholder="Ex: CAD">
+                <!--  <option value="INR">INR</option>
+                <option value="CAD">CAD</option>
+                <option value="AUD">AUD</option>
+                <option value="GBP">GBP</option>
+                <option value="USD">USD</option>
+                <option value="NPR">NPR</option>
+ -->
+</input>
+            </div>
+
+
+          </div>
+
+
+        </div>
+        <div class="exchangeRate1">Type 3 letters currency code in CAPS </div>
+
+        <div class="exchangeRate">Getting exchange rate...</div>
+
+        <button>Get Exchange Rate</button>
+      </form>
+    </div>
+    <footer>Created By:Isha Desai Crowthers</footer>
+  </body>
+</html>

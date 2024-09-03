@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- Demo styles -->
+    <style>
+       
+
+      /*  ================================================
+:: 9.0 app-screenshots CSS
+    ================================================ */
+.app-screen {
+    padding-bottom: 5.313rem;
+}
+.app-screen .swiper-slide {
+    width: 300px !important;
+    height: auto;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 10.5rem;
+}
+.swiper-pagination-bullet {
+    width: 0.75rem;
+    height: 0.75rem;
+}
+
+
+ 
+
+    
+
+    .swiper-slide {
+      background-position: center;
+      background-size:auto;
+
+    
+    }
+
+    .swiper-slide img {
+      display: inline-grid;
+    }
+
+    </style>
+</head>
+
+<body>
+    <section id="app-screenshots" class="ptb_100">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <!-- screenshots title -->
+                    <div class="section_heading text-center mb-5">
+                        <h2 class="section_title"> App Screenshots</h2>
+                        <!-- section sub title -->
+                        <p class="section_sub_title">
+                            Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+                        </p>
+                    </div>
+                </div>
+                <!--// .col //-->
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="swiper-container app-screen">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <!-- single screenshot image -->
+                        <div class="slider-image">
+                            <img src="App_images/images/screenshots/1.jpg" alt="slide 1">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- single screenshot image -->
+                        <div class="slider-image">
+                            <img src="App_images/images/screenshots/2.jpg" alt="slide 2">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- single screenshot image -->
+                        <div class="slider-image">
+                            <img src="App_images/images/screenshots/3.jpg" alt="slide 3">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- single screenshot image -->
+                        <div class="slider-image">
+                            <img src="App_images/images/screenshots/4.jpg" alt="slide 4">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- single screenshot image -->
+                        <div class="slider-image">
+                            <img src="App_images/images/screenshots/5.jpg" alt="slide 5">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- single screenshot image -->
+                        <div class="slider-image">
+                            <img src="App_images/images/screenshots/1.jpg" alt="slide 1">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- single screenshot image -->
+                        <div class="slider-image">
+                            <img src="App_images/images/screenshots/2.jpg" alt="slide 2">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- single screenshot image -->
+                        <div class="slider-image">
+                            <img src="App_images/images/screenshots/3.jpg" alt="slide 3">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- single screenshot image -->
+                        <div class="slider-image">
+                            <img src="App_images/images/screenshots/4.jpg" alt="slide 4">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- single screenshot image -->
+                        <div class="slider-image">
+                            <img src="App_images/images/screenshots/5.jpg" alt="slide 5">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        // APP-SCREEN
+        var swiper = new Swiper('.swiper-container.app-screen ', {
+            effect: "coverflow",
+            loop: true,
+                coverflowEffect: {
+                rotate: -1,
+                stretch: 300,
+                depth: 70,
+                modifier: 1,
+                slideShadows: false,
+
+            },
+            autoplaySpeed: 3000,
+            centeredSlides: true,
+            grabCursor: true,
+
+            slidesPerView: '4',
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: false,
+                rotate: -2,
+            },
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                loop: true,
+
+            },
+            paginationClickable: true,
+            coverflow: {
+                rotate: 0,
+                stretch: 100,
+                depth: 150,
+                modifier: 1.9,
+                slideShadows: false,
+                loop: true,
+
+            }
+
+        });
+    </script>
+</body>
+
+</html>

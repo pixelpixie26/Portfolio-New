@@ -1,0 +1,2049 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Isha's Portfolio</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!--BOX ICONS-->
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --bg-color: #081b29;
+            --second-bg-color: #112e42;
+            --text-color: #fdfcfc;
+            --main-color: rgb(243, 109, 210);
+            --hue-color: 162;
+            --gradient: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important;
+        }
+
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem 9%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: transparent;
+            transition: 0.3s;
+        }
+
+        .header.sticky {
+            background: var(--bg-color);
+        }
+
+
+        .logo {
+            position: relative;
+            font-size: 2.5rem;
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        .navbar {
+            position: relative;
+        }
+
+        .navbar a {
+            margin-left: 3.5rem;
+            font-size: 1.7rem;
+            font-weight: 500;
+            color: var(--text-color);
+            transition: 0.4s ease-in-out;
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            color: var(--main-color);
+        }
+
+        #menuIcon {
+            position: relative;
+            font-size: 3.6rem;
+            color: var(--text-color);
+            cursor: pointer;
+            display: none;
+        }
+        .homeSci{
+            left:220px;
+        }
+
+        /*---HOME SECTION DESIGN-----*/
+
+        section {
+            min-height: 100vh;
+            padding: 10rem 9% 2rem;
+        }
+
+        .home {
+            display: flex;
+            align-items: center;
+            padding: 0 9%;
+
+            background: url(images/isha2.png) no-repeat;
+            background-position: right;
+            background-size: contain;
+
+        }
+
+        .homeContent {
+            max-width: 60rem;
+            z-index: 99;
+        }
+
+        .homeContent h1 {
+            font-size: 5.6rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .homeContent h1 span {
+            color: var(--text-color);
+
+        }
+
+        .homeContent .textAnimated {
+            position: relative;
+            width: 38.8rem;
+        }
+
+        .homeContent .textAnimated h3 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: transparent;
+            -webkit-text-stroke: 1.7px var(--main-color);
+            background-image: linear-gradient(var(--main-color), var(--main-color));
+            background-repeat: no-repeat;
+            -webkit-background-clip: text;
+            background-position: -33rem 0;
+            animation: homeBgText 6s linear infinite;
+            animation-delay: 2s;
+
+        }
+       
+
+        .homeContent .textAnimated h3::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            border-right: 2px solid var(--main-color);
+            z-index: -1;
+            animation: homeCursorText 6s linear infinite;
+            animation-delay: 2s;
+
+        }
+       
+        /*---KEYFRAMES ANIMATION----*/
+
+        @keyframes homeBgText {
+
+            0%,
+            10%,
+            100% {
+                background-position: -33rem 0;
+            }
+
+            65%,
+            85% {
+                background-position: 0 0;
+            }
+
+
+
+
+
+        }
+
+
+        @keyframes homeCursorText {
+
+            0%,
+            10%,
+            100% {
+                width: 0;
+            }
+
+            65%,
+            78%,
+            85% {
+                width: 100%;
+                opacity: 1;
+            }
+
+            75%,
+            81% {
+                opacity: 0;
+            }
+
+
+
+
+
+        }
+
+
+
+        .homeContent p {
+            font-size: 1.6rem;
+            margin: 2rem 0 4rem;
+        }
+
+        .btnBox {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            width: 34.5rem;
+            height: 5rem;
+        }
+
+        .btnBox .btn {
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 15rem;
+            height: 130%;
+            background: var(--main-color);
+            border: 0.2rem solid var(--main-color);
+            border-radius: 0.8rem;
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: 0.1rem;
+            color: var(--bg-color);
+            z-index: 1;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+
+        .btnBox .btn:hover {
+            color: var(--main-color);
+        }
+
+        .btnBox .btn:nth-child(2) {
+            background: transparent;
+            color: var(--main-color);
+        }
+
+        .btnBox .btn:nth-child(2):hover {
+            color: var(--bg-color);
+        }
+
+        .btnBox .btn:nth-child(2)::before {
+            background: var(--main-color);
+        }
+
+        .btnBox .btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background: rgb(22, 2, 44);
+            z-index: -1;
+            transition: 0.5s;
+        }
+
+        .btnBox .btn:hover::before {
+            width: 100%;
+        }
+
+        .homeSci {
+            position: absolute;
+            bottom: 1rem;
+            width: 170px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .homeSci a {
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: 0.2rem solid var(--main-color);
+            border-radius: 50%;
+            font-size: 20px;
+            color: var(--main-color);
+            z-index: 1;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+
+        .homeSci a:hover {
+            color: var(--bg-color);
+        }
+
+        .homeSci a::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background: var(--main-color);
+            z-index: -1;
+            transition: 0.5s;
+        }
+
+        .homeSci a:hover::before {
+            width: 100%;
+        }
+
+        .homeImgHover {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 45%;
+            height: 100%;
+            background: transparent;
+            transition: 3s;
+        }
+
+        .homeImgHover:hover {
+            background: var(--bg-color);
+            opacity: 0.8;
+        }
+
+        /*---ABOUT PAGE -------*/
+
+        .about {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 2rem;
+            background: var(--second-bg-color);
+            padding-bottom: 6rem;
+        }
+
+        .heading {
+            font-size: 5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        span {
+            color: var(--main-color);
+        }
+
+        .aboutImg {
+
+            position: relative;
+            width: 25rem;
+            height: 25rem;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .aboutImg img {
+            width: 90%;
+            border-radius: 50%;
+            padding: 0 30px;
+            border: .2rem solid var(--main-color);
+
+        }
+
+        .aboutImg .circleSpin {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(0);
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border-top: 0.2rem solid var(--second-bg-color);
+            border-bottom: 0.2rem solid var(--second-bg-color);
+            border-left: 0.2rem solid var(--main-color);
+            border-right: 0.2rem solid var(--main-color);
+            animation: aboutSpinner 8s linear infinite;
+
+
+        }
+
+        /*---KEYFRAMES-----*/
+
+        @keyframes aboutSpinner {
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+
+            }
+        }
+
+        .aboutContent {
+            text-align: center;
+        }
+
+        .aboutContent h3 {
+            font-size: 2.6rem;
+        }
+
+        .aboutContent p {
+            font-size: 1.6rem;
+            margin: 2rem 0 3rem;
+        }
+
+
+
+        .btnBox.btns {
+            display: inline-block;
+            width: 15rem;
+        }
+
+        .btnBox.btns a::before {
+            background: var(--second-bg-color);
+        }
+
+        /*-----------EDUCATION-----------*/
+
+        .education {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: auto;
+            padding-bottom: 5rem;
+
+        }
+
+        .education .educationRow {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5rem;
+
+        }
+
+        .educationRow .educationColumn {
+            flex: 1 1 40rem;
+        }
+
+        .educationColumn .title {
+            font-size: 2.5rem;
+            margin: 0 0 1.5rem 2rem;
+        }
+
+        .educationColumn .educationBox {
+            border-left: 0.2rem solid var(--main-color);
+
+        }
+
+        .educationBox .educationContent {
+            position: relative;
+            padding-left: 2rem;
+
+        }
+
+        .educationContent .content {
+            position: relative;
+            padding: 1.5rem;
+            border: 0.2rem solid var(--main-color);
+            border-radius: 0.6rem;
+            margin-bottom: 2rem;
+        }
+
+        .educationBox .educationContent::before {
+            content: '';
+            position: absolute;
+            top: 0;
+
+            left: -1.1rem;
+            width: 2rem;
+            height: 2rem;
+            background: var(--main-color);
+            border-radius: 50%;
+            overflow: hidden;
+
+        }
+
+        .educationContent .content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: var(--second-bg-color);
+            z-index: -1;
+            transition: .3s;
+        }
+
+        .educationContent .content:hover::before {
+            width: 100%;
+        }
+
+
+        .educationContent .content .year {
+            font-size: 1.5rem;
+            color: var(--main-color);
+            padding-bottom: .5rem;
+        }
+
+        .educationContent .content .year i {
+            padding-right: .5rem;
+
+        }
+
+        .educationContent .content .year h3 {
+            color: var(--text-color);
+            font-size: 2rem;
+
+        }
+
+        .educationContent .content .year p {
+            color: var(--text-color);
+            font-size: 1.6rem;
+            padding-top: .5rem;
+        }
+
+
+        /*PROJECTS*/
+
+
+
+
+
+
+
+
+        .projects {
+            background: var(--second-bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: auto;
+            padding-bottom: 5rem;
+
+        }
+
+
+        .projectsContainer {
+            row-gap: 2rem;
+            justify-content: center;
+            padding-block: 1rem;
+        }
+
+        .projectsCard {
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        .projectsImg {
+            width: 80%;
+            height: 100%;
+            margin-top: 50px;
+            object-fit: scale-down;
+            border-radius: 3%;
+        }
+
+        .projectsModal {
+            position: absolute;
+            left: 0;
+            bottom: -100%;
+            width: 100%;
+            height: 85%;
+            background: linear-gradient(180deg, hsla(312, 66%, 91%, 0.8)150%, hsla(312, 66%, 91%, 0.8)150%);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: bottom .4s;
+        }
+
+        .projectsSubtitle,
+        .projectsButton {
+            color: var(--bg-color);
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+
+
+
+        .projectsSubtitle {
+            display: block;
+            margin-bottom: .25rem
+        }
+
+        .projectsTitle {
+            font-size: 22px;
+            color: var(--bg-color);
+            margin-bottom: .75rem;
+
+        }
+
+        .projectsButton {
+            color: purple;
+            font-size: 19px;
+        }
+
+        .projectsButton {
+            display: flex;
+            align-items: center;
+            column-gap: .5rem;
+            font-weight: 500;
+        }
+
+        .projectsButton i {
+            font-size: 1.25rem;
+        }
+
+        .projectsCard:hover .projectsModal {
+            bottom: 0;
+        }
+
+        .sectionSubtitle {
+            font-size: 5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+
+        /*---Contact---*/
+
+        .contact-Container {
+            padding-top: 1rem;
+
+        }
+
+        /*         .contact-form,
+        .contact-group {
+            display: grid;
+            row-gap: 2rem;
+        }
+
+        .contact-form {
+            position: relative;
+        }
+
+        .contact-input {
+            padding: 1rem 1.25rem;
+            border-radius: .5rem;
+            background-color: var(--second-bg-color);
+            color: var(--text-color);
+        }
+
+
+        .contact-input::placeholder {
+            color: var(--text-color);
+        }
+
+        .contact-form textarea {
+            height: 11rem;
+            resize: none;
+            margin-bottom: 2rem;
+        }
+
+        .contact-button {
+            justify-self: center;
+            cursor: pointer;
+            background: var(--main-color);
+            height: 50px;
+            width: 180px;
+            border-radius: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .contact-message {
+            position: absolute;
+            left: 0;
+            bottom: 1.5rem;
+            font-size: 14px;
+            color: var(--text-color);
+
+        }
+
+ */
+        .contact form {
+            max-width: 70rem;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact form .input-box {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .contact form .input-box .input-field {
+            position: relative;
+            width: 49%;
+            margin: .8rem 0;
+
+        }
+
+        .contact form .input-box .input-field input,
+        .contact form textarea {
+            width: 100%;
+            height: 100%;
+            padding: 1.5rem;
+            font-size: 1.6rem;
+            color: var(--text-color);
+            background: transparent;
+            border-radius: .6rem;
+            border: .2px solid var(--main-color);
+            resize: none;
+
+        }
+
+        .contact form .input-box .input-field input::placeholder,
+        .contact form textarea::placeholder {
+            color: var(--text-color);
+        }
+
+        .contact form .focus {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background: var(--second-bg-color);
+            border-radius: .6rem;
+            z-index: -1;
+            transition: .5s;
+        }
+
+        .contact form .input-box .input-field input:focus~.focus,
+        .contact form .input-box .input-field input:valid~.focus {
+
+            width: 100%;
+        }
+
+        .contact form textarea:focus~.focus,
+        .contact form textarea:valid~.focus {
+            width: 205%;
+            position: absolute;
+            top: 5px;
+            left: 0;
+        }
+
+
+        .contact form textarea {
+            position: relative;
+            margin: .8rem 0 2.7rem;
+            display: flex;
+            width: 205%;
+
+        }
+
+
+
+        .contact form .btn-box.btns .btn {
+            cursor: pointer;
+            background: var(--main-color);
+
+
+        }
+
+        .contact-group .contact-message {
+            font-size: 14px;
+            display: flex;
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .btnBox .contact-button {
+            justify-content: center;
+            text-align: center;
+            display: flex;
+            position: relative;
+            left: -20px;
+            top: 70px;
+            width: 100%;
+
+        }
+
+        .sectionTitle {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        /*---------FOOTER--------------*/
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 2rem 9%;
+            background: var(--second-bg-color);
+
+        }
+
+        .footer-text p {
+            font-size: 1.6rem;
+
+        }
+
+        .footer-iconTop a {
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.8rem;
+            background: var(--main-color);
+            border: 0.2rem solid var(--main-color);
+            border-radius: 0.6rem;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .footer-iconTop a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background: var(--second-bg-color);
+            z-index: -1;
+            transition: 0.5s;
+        }
+
+        .footer-iconTop a:hover::before {
+
+            width: 100%;
+        }
+
+        .footer-iconTop a i {
+            font-size: 2.4rem;
+            color: var(--bg-color);
+            transition: 0.5s;
+        }
+
+        .footer-iconTop a:hover i {
+            color: var(--main-color);
+        }
+
+
+        /*------ANIMATION RELOAD AND  SCROLL-------------*/
+
+        .animate {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--main-color);
+            z-index: 98;
+        }
+
+        .logo .animate,
+        .navbar .animate,
+        #menuIcon .animate {
+            animation: showRight 1s ease forwards;
+            animation-delay: calc(.3s * var(--i));
+        }
+
+
+        /*-------KEYFRAMES ANIMATION-------*/
+        @keyframes showRight {
+            100% {
+                width: 0;
+            }
+        }
+
+
+
+        /*----BREAKPOINTS-------------*/
+
+        @media(max-width:1300px) {
+
+            .projectsSubtitle {
+                font-size: 15px;
+            }
+
+            .projectsTitle,
+            .projectsButton {
+                font-size: 17px;
+
+            }
+
+        }
+
+
+
+
+        @media(max-width:1200px) {
+            html {
+                font-size: 55%;
+            }
+
+            .home {
+                background-position: right;
+                background-size: contain;
+                background-position-x: 610px;
+
+            }
+
+            .projectsSubtitle {
+                font-size: 15px;
+            }
+
+            .projectsTitle,
+            .projectsButton {
+                font-size: 17px;
+
+            }
+        }
+
+        
+
+        @media(max-width:991px) {
+
+            .header {
+                padding: 2rem 4%;
+            }
+
+            section {
+                padding: 10rem 4% 2rem;
+            }
+
+            .home {
+                padding: 0 4%;
+            }
+
+            .footer {
+                padding: 2rem 4%;
+            }
+
+            .home {
+                background-position: right;
+                background-size: contain;
+                background-position-x: 400px;
+
+            }
+
+            .projectsSubtitle {
+                font-size: 12px;
+            }
+
+            .projectsTitle,
+            .projectsButton {
+                font-size: 13px;
+
+            }
+        }
+
+        @media(max-width:768px) {
+
+            .header {
+                background: var(--bg-color);
+            }
+
+            #menuIcon {
+                display: block;
+            }
+
+
+            .navbar {
+                position: absolute;
+                top: 100%;
+                left: -100%;
+                width: 100%;
+                padding: 1rem 4%;
+                background: var(--main-color);
+                box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.2);
+                display: block;
+                transition: .25s ease;
+                transition-delay: .25s;
+                z-index: 1;
+            }
+
+            .navbar.active {
+                left: 0;
+
+                transition-delay: 0s;
+            }
+
+            .navbar .active-nav {
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: var(--bg-color);
+                border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+                z-index: -1;
+                transition: .25s ease;
+                transition-delay: 0s;
+            }
+
+            .navbar.active .active-nav {
+                left: 0;
+                transition-delay: .25s;
+
+            }
+
+            .navbar a {
+                display: block;
+                font-size: 2rem;
+                margin: 3rem 0;
+                transform: translateX(-20rem);
+                transition: .25s ease;
+                transition-delay: 0s;
+            }
+
+            .navbar.active a {
+                transform: translateX(0);
+                transition-delay: .25s;
+
+            }
+
+            
+
+            .homeImgHover {
+                pointer-events: none;
+                background: var(--bg-color);
+                width: 63%;
+                opacity: 100;
+            }
+
+
+            .projectsSubtitle {
+                font-size: 18px;
+            }
+
+            .projectsTitle,
+            .projectsButton {
+                font-size: 22px;
+
+            }
+
+            .projects {
+                background: var(--second-bg-color);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                min-height: auto;
+                padding-bottom: 5rem;
+                justify-items: center;
+                text-align: center;
+            }
+
+
+        }
+
+        @media(max-width:520px) {
+
+            html {
+                font-size: 50%;
+            }
+
+            .homeContent h1 {
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            .home {
+              
+                height: 0px;
+                width: 0px;
+        }
+
+            .homeImgHover {
+                pointer-events: none;
+                background: var(--bg-color);
+                width: 100%;
+                height: 100%;
+
+                opacity: 100;
+            }
+
+            .homeSci {
+
+                width: 120px;
+                bottom: 0rem;
+
+            }
+
+            .homeSci a {
+
+                width: 38px;
+                height: 38px;
+
+            }
+
+            .projectsSubtitle {
+                font-size: 15px;
+            }
+
+            .projectsTitle,
+            .projectsButton {
+                font-size: 17px;
+
+            }
+
+            .contact-group .contact-message {
+                font-size: 10px;
+            }
+
+            .btnBox.btns {
+             
+                bottom: 0px;
+            }
+        }
+
+        @media(max-width:462px) {
+
+            .homeContent h1 {
+                font-size: 5.2rem;
+            }
+
+            .home {
+              
+                height: 0px;
+                width: 0px;
+        }
+
+            .education {
+                padding: 10rem 4% 5rem 5%;
+            }
+
+            .contact-form,
+            .contact-group,
+            .contact-input {
+                width: 100%;
+            }
+
+            .footer {
+                flex-direction: column-reverse;
+            }
+
+            .footer p {
+                margin-top: 2rem;
+                text-align: center;
+            }
+
+            .projectsSubtitle {
+                font-size: 15px;
+            }
+
+            .projectsTitle,
+            .projectsButton {
+                font-size: 17px;
+
+            }
+
+            .homeImgHover {
+                pointer-events: none;
+                background: var(--bg-color);
+                width: 100%;
+                height: 100%;
+
+                opacity: 100;
+            }
+
+            .homeSci {
+
+                width: 120px;
+                bottom: 0rem;
+
+            }
+           
+            .btnBox.btns {
+             
+                bottom: 0px;
+            }
+
+        }
+
+        @media(max-width:371px) {
+
+            .home {
+              
+                height: 0px;
+                width: 0px;
+        }
+
+            .projectsSubtitle {
+                font-size: 15px;
+            }
+
+            .projectsTitle,
+            .projectsButton {
+                font-size: 17px;
+
+            }
+
+            .homeImgHover {
+                pointer-events: none;
+                background: var(--bg-color);
+                width: 100%;
+                height: 100%;
+
+                opacity: 100;
+            }
+
+            .homeContent {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .homeContent h1 {
+                font-size: 5rem;
+
+            }
+
+            .homeSci {
+
+                width: 120px;
+                bottom: 0rem;
+
+            }
+
+            
+
+            .btnBox .btn {
+             
+                bottom: 0px;
+                position: relative;
+                left: 1px;
+            }
+        }
+
+        @media(max-width:300px) {
+
+            .home {
+              
+                height: 0px;
+                width: 0px;
+        }
+
+            .projectsSubtitle {
+                font-size: 15px;
+            }
+
+            .projectsTitle,
+            .projectsButton {
+                font-size: 17px;
+
+            }
+
+            .homeImgHover {
+                pointer-events: none;
+                background: var(--bg-color);
+                width: 100%;
+                height: 100%;
+
+                opacity: 100;
+            }
+
+            .homeContent {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .homeContent h1 {
+                font-size: 5rem;
+
+            }
+
+            .homeSci {
+
+                width: 120px;
+                bottom: 0rem;
+
+            }
+
+            
+
+            .btnBox .btn {
+             
+                bottom: 0px;
+                position: relative;
+                left: 100px;
+            }
+        }
+
+      
+    </style>
+</head>
+
+<body>
+    <!--Header Design -->
+
+    <header class="header">
+        <a href="#" class="logo">Isha. <span class="animate" style="--i:1"></span></a>
+
+        <div class="bx bx-menu" id="menuIcon"><span class="animate" style="--i:2"></span></div>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+           <!-- <a href="#education">Education</a> -->
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+
+
+            <span class="active-nav"></span>
+            <span class="animate" style="--i:2"></span>
+        </nav>
+    </header>
+
+    <!--HOMESECTION DESIGN-->
+
+    <section class="home showAnimate" id="home">
+        <div class="homeContent">
+            <h1>Hi, I'm <span>Isha Desai Crowthers</span></h1>
+            <div class="textAnimated">
+                <h3> Software Engineer <br>
+                    Full Stack Developer<br>
+                    Data Analyst <br>
+                    Business Analyst<br>
+                </h3>
+            </div>
+            <!--Ctrl+Shift+P...then type format document or Alt Shift F-->
+            <p>
+                Exhibiting proficiency in web and Android development, my expertise as a dynamic software engineer extends beyond coding to encompass business, data, and programming analysis. Spanning these domains, a diverse background defines my professional journey, reflecting versatility.
+
+
+
+
+
+
+            </p>
+
+            <div class="btnBox">
+                <!-- <a href="CV/Isha__Desai_Crowthers_-_Web_Developer (9).pdf" class="btn" download>Download CV</a>-->
+                <a href="#" class="btn">Let's Talk</a>
+            </div> 
+        </div>
+
+        <div class="homeSci">
+            <a href="https://www.facebook.com/isha.desai333" target="_blank"><i class="bx bxl-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/isha-desai-crowthers-9148b9282/" target="_blank"><i
+                    class="bx bxl-linkedin"></i></a>
+            <a href="https://github.com/ishupinkzn?tab=repositories" target="_blank"><i class="bx bxl-github"></i></a>
+        </div>
+
+        <div class="homeImgHover"></div>
+    </section>
+
+
+    <!--ABOUT SECTION-->
+
+    <section class="about" id="about">
+        <h2 class="heading">About <span>Me</span></h2>
+
+
+        <div class="aboutImg">
+            <img src="images/isha2.png" alt="">
+            <span class="circleSpin"></span>
+        </div>
+
+        <div class="aboutContent">
+           <!-- <h3>Front End Developer/UI Developer/Android Developer</h3> -->
+            <p>
+                My career journey highlights a dynamic evolution, marked by purposeful transitions. Starting as a Software Engineer and Systems Developer, I cultivated a strong technical foundation. Transitioning into a Full Stack Developer role, I navigated both front-end and back-end development, ensuring holistic application creation.
+
+                The realm of mobile technology beckoned, leading me to become an Android Developer. This phase enabled crafting innovative mobile applications that seamlessly integrate advanced technology with optimal user experiences. Curiosity then steered me towards Data Analysis, extracting valuable insights from intricate datasets.
+                
+                As a Programmer Analyst, I delved into algorithmic decoding, enhancing operational efficiencies through meticulous optimization. Currently, my path has led me to Business Analysis, where profound technical proficiency merges with strategic insight to orchestrate transformative solutions.
+                
+                My trajectory signifies adaptability, yielding a diverse skill set spanning technology, data, and strategy. This fusion empowers me to address multifaceted challenges, and the journey continues to embody steadfast growth and achievement.
+
+            </p>
+            <div class="btnBox btns">
+                <a href="#projects" class="btn">Scroll to Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!--EDUCATION SECTION--
+
+    <section class="education" id="education">
+        <h2 class="heading">My <span>Journey</span></h2>
+
+        <div class="educationRow">
+            <div class="educationColumn">
+                <h3 class="title">Education</h3>
+                <div class="educationBox">
+                    <div class="educationContent">
+                        <div class="content">
+                            <div class="year">
+                                <i class='bx bxs-calendar'></i>
+
+                                2005-2008
+                                <h3>Bachelors in Computer Science - VNSGU, Surat</h3>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="educationContent">
+                        <div class="content">
+                            <div class="year">
+                                <i class='bx bxs-calendar'></i>
+
+                                2009-2011
+                                <h3>Masters in Business Administration(Strategic Management) - London School of
+                                    Accountancy & Management, London </h3>
+                                <i class="bx bxs-calender"></i>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="educationContent">
+                        <div class="content">
+                            <div class="year">
+                                <i class='bx bxs-calendar'></i>
+
+                                2009
+                                <h3>Microsoft Certified Systems Engineer</h3>
+                                <i class="bx bxs-calender"></i>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="educationContent">
+                        <div class="content">
+                            <div class="year">
+                                <i class='bx bxs-calendar'></i>
+
+                                2020-2022
+                                <h3>Diploma in Business Information Systems - Saskpolytech,Regina</h3>
+                                <i class="bx bxs-calender"></i>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="educationColumn">
+                <h3 class="title">Experience</h3>
+                <div class="educationBox">
+                    <div class="educationContent">
+                        <div class="content">
+                            <div class="year">
+
+                                <i class='bx bxs-calendar'></i>
+
+                                2011-2017
+                                <h3>Front End Web Developer-Lotus Infotech, Surat </h3>
+
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="educationContent">
+                        <div class="content">
+                            <div class="year">
+                                <i class='bx bxs-calendar'></i>
+                                2018-2019
+                                <h3>UI Developer - Sai Krupa Enterprise, Surat</h3>
+
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="educationContent">
+                        <div class="content">
+                            <div class="year">
+                                <i class='bx bxs-calendar'></i>
+                                2020-2021
+                                <h3>Junior Android Developer - Estrela Do Mar, (Remote)</h3>
+
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section> -->
+
+    <!--Project Page-->
+
+
+
+    </div>
+
+    </section>
+
+
+    <section class="projects" id="projects">
+
+
+        <h3 class="sectionSubtitle">
+            My <span>Recent Projects</span>
+        </h3>
+
+        <div class="row">
+            <div class="col-md-4">
+
+
+                <article class="projectsCard">
+
+                    <img src="images/responsiveE-store (1).png" alt="projects image" class="projectsImg">
+
+                    <div class="projectsModal">
+                        <span class="projectsSubtitle">
+                            HTML/CSS
+                        </span>
+                        <h2 class="projectsTitle">Responsive E-Store Website</h2>
+
+                        <a href="ECommerceSite.html" class="projectsButton" target="_blank">
+                            View Demo <i class='bx bx-link-external'></i>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+
+                <article class="projectsCard">
+
+                    <img src="images/UniversityWebsite (2).png" alt="projects image" class="projectsImg">
+
+                    <div class="projectsModal">
+                        <span class="projectsSubtitle">
+                            HTML/CSS
+                        </span>
+                        <h2 class="projectsTitle">Responsive University Website</h2>
+
+                        <a href="EducationSite.html" class="projectsButton" target="_blank">
+                            View Demo <i class='bx bx-link-external'></i>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+
+                <article class="projectsCard">
+
+                    <img src="images/restaurant.png" alt="projects image" class="projectsImg">
+
+                    <div class="projectsModal">
+                        <span class="projectsSubtitle">
+                            BootStrap
+                        </span>
+                        <h2 class="projectsTitle">Food & Restaurant Website</h2>
+
+                        <a href="BootStrap/Restaurant and Food Website.html" class="projectsButton" target="_blank">
+                            View Demo <i class='bx bx-link-external'></i>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-4">
+
+
+                <article class="projectsCard">
+
+                    <img src="images/websiteapp (1).png" alt="projects image" class="projectsImg">
+
+                    <div class="projectsModal">
+                        <span class="projectsSubtitle">
+                            BootStrap
+                        </span>
+                        <h2 class="projectsTitle">Mobile WebSite</h2>
+
+                        <a href="BootStrap/WebSiteApp.html" class="projectsButton" target="_blank">
+                            View Demo <i class='bx bx-link-external'></i>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+            <!--ALL IMAGE WIDTH ADJUSTED TO 533 AND HEIGHT 300-->
+
+            <div class="col-md-4">
+
+
+                <article class="projectsCard">
+
+                    <img src="images/fortunewebsite (1).png" alt="projects image" class="projectsImg">
+
+                    <div class="projectsModal">
+                        <span class="projectsSubtitle">
+                            BootStrap
+                        </span>
+                        <h2 class="projectsTitle">Fortune MultiPurpose Website</h2>
+
+                        <a href="BootStrap/Fortune/index.html" class="projectsButton" target="_blank">
+                            View Demo <i class='bx bx-link-external'></i>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+
+                <article class="projectsCard">
+
+                    <img src="images/currencyconverter (2).png" alt="projects image" class="projectsImg">
+
+                    <div class="projectsModal">
+                        <span class="projectsSubtitle">
+                            JavaScript
+                        </span>
+                        <h2 class="projectsTitle">Currency Converter</h2>
+
+                        <a href="JAVASCRIPT PROJ/Currency Converter/currencyConverter.html" class="projectsButton"
+                            target="_blank">
+                            View Demo <i class='bx bx-link-external'></i>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-4">
+
+
+                <article class="projectsCard">
+
+                    <img src="images/disneyplusclone (1).png" alt="projects image" class="projectsImg">
+
+                    <div class="projectsModal">
+                        <span class="projectsSubtitle">
+                            JavaScript
+                        </span>
+                        <h2 class="projectsTitle">Disney+ Clone</h2>
+
+                        <a href="JAVASCRIPT PROJ/Disney Plus HotStar/disneyPlus.html" class="projectsButton"
+                            target="_blank">
+                            View Demo <i class='bx bx-link-external'></i>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+
+                <article class="projectsCard">
+
+                    <img src="images/ishasmap (1).png" alt="projects image" class="projectsImg">
+
+                    <div class="projectsModal">
+                        <span class="projectsSubtitle">
+                            JavaScript
+                        </span>
+                        <h2 class="projectsTitle">Isha's Map for Directions</h2>
+
+                        <a href="JAVASCRIPT PROJ/Isha's Map Directions/GoogleMapAPIServices.html" class="projectsButton"
+                            target="_blank">
+                            View Demo <i class='bx bx-link-external'></i>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+
+                <article class="projectsCard">
+
+                    <img src="images/languagetranslator (1).png" alt="projects image" class="projectsImg">
+
+                    <div class="projectsModal">
+                        <span class="projectsSubtitle">
+                            JavaScript
+                        </span>
+                        <h2 class="projectsTitle">Language Translator</h2>
+
+                        <a href="JAVASCRIPT PROJ/Language Translator/languageTranslator.html" class="projectsButton"
+                            target="_blank">
+                            View Demo <i class='bx bx-link-external'></i>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+
+
+                <article class="projectsCard">
+
+                    <img src="images/linkedinclone (1).png" alt="projects image" class="projectsImg">
+
+                    <div class="projectsModal">
+                        <span class="projectsSubtitle">
+                            JavaScript
+                        </span>
+                        <h2 class="projectsTitle">Linkedin Clone</h2>
+
+                        <a href="JAVASCRIPT PROJ/Linkedin clone/linkedinclone.html" class="projectsButton"
+                            target="_blank">
+                            View Demo <i class='bx bx-link-external'></i>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+
+                <article class="projectsCard">
+
+                    <img src="images/musicplayer (2).png" alt="projects image" class="projectsImg">
+
+                    <div class="projectsModal">
+                        <span class="projectsSubtitle">
+                            JavaScript
+                        </span>
+                        <h2 class="projectsTitle">Music Player App</h2>
+
+                        <a href="JAVASCRIPT PROJ/Music Player/MusicPlayer.html" class="projectsButton" target="_blank">
+                            View Demo <i class='bx bx-link-external'></i>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+
+                <article class="projectsCard">
+
+                    <img src="images/mspaintapp (1).png" alt="projects image" class="projectsImg">
+
+                    <div class="projectsModal">
+                        <span class="projectsSubtitle">
+                            JavaScript
+                        </span>
+                        <h2 class="projectsTitle">MSPaint App</h2>
+
+                        <a href="JAVASCRIPT PROJ/CustomPaintApp/CustomPaintApp.html" class="projectsButton"
+                            target="_blank">
+                            View Demo <i class='bx bx-link-external'></i>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-6">
+
+
+                <article class="projectsCard">
+
+                    <img src="images/Weather 1 (1).png" alt="projects image" class="projectsImg">
+
+                    <div class="projectsModal">
+                        <span class="projectsSubtitle">
+                            JavaScript
+                        </span>
+                        <h2 class="projectsTitle">Weather App</h2>
+
+                        <a href="JAVASCRIPT PROJ/Weather App/weather.html" class="projectsButton" target="_blank">
+                            View Demo <i class='bx bx-link-external'></i>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+
+            <div class="col-md-6">
+
+
+                <article class="projectsCard">
+
+                    <img src="images/Quizz app.png" alt="projects image" class="projectsImg">
+
+                    <div class="projectsModal">
+                        <span class="projectsSubtitle">
+                            JavaScript
+                        </span>
+                        <h2 class="projectsTitle">Quizz App</h2>
+
+                        <a href="JAVASCRIPT PROJ/Quiz App/quiz.html" class="projectsButton" target="_blank">
+                            View Demo <i class='bx bx-link-external'></i>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!--Contact section-->
+
+    <section class="contact" id="contact">
+        <h3 class="sectionSubtitle">
+            Get In <span>Touch</span>
+        </h3>
+
+        <h2 class="sectionTitle">
+            Contact Me
+        </h2>
+
+        <div class="contact-container container grid">
+            <form action="" class="contact-form" id="contact-form">
+                <div class="input-box">
+                    <div class="contact-group input-field">
+                        <input type="text" name="user_name" placeholder="Enter your name" required
+                            class="contact-input">
+                        <span class="focus"></span>
+
+                    </div>
+
+                    <div class="contact-group input-field">
+
+
+                        <input type="email" name="user_email" placeholder="Enter your email" required
+                            class="contact-input">
+                        <span class="focus"></span>
+
+
+                    </div>
+                    <div class="contact-group input-field">
+
+                        <textarea name="user_project" required placeholder="Enter your message"
+                            class="contact-input textarea-field"></textarea>
+                        <span class="focus"></span>
+
+                        <p class="contact-message" id="contact-message">
+
+                        </p>
+                    </div>
+                </div>
+
+                <div class="btns btnBox">
+                    <button class=" contact-button btn" type="submit">
+                        Send Message
+                    </button>
+                </div>
+
+
+            </form>
+        </div>
+    </section>
+
+
+    <!--Footer Design----->
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>CopyRight &copy; 2023 by IshaDesaiCrowthers | All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <!--COPY THE SDK FROM EMAILJS-->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script>
+        //EMAIL JS //SEND EMAILS
+
+        const contactForm = document.getElementById("contact-form"),
+            contactMessage = document.getElementById("contact-message");
+
+
+        const sendEmail = (e) => {
+            e.preventDefault();
+            emailjs.sendForm('service_zl662se', 'template_abd1zjd', '#contact-form', '49QIqde7cBB7oqNxe')
+                .then(function () {
+                    console.log('SUCCESS!');
+                }, function (error) {
+                    console.log('FAILED...', error);
+                });
+            //service ID - templateID-#form-publickey
+            emailjs.sendForm('service_zl662se', 'template_abd1zjd', '#contact-form', '49QIqde7cBB7oqNxe').then(() => {
+
+                console.log(emailjs);
+                //Show sent message
+                contactMessage.textContent = "Message sent successfully \u{2705} ";
+
+
+            }, () => {
+
+                //Show error message
+                contactMessage.textContent = "Message not sent (Service Error) \u{274C} ";
+            })
+
+        }
+
+        contactForm.addEventListener('submit', sendEmail);
+
+
+
+
+
+        //TOGGLE ICON NAVBAR
+
+        let menuIcon = document.querySelector('#menuIcon');
+        let navbar = document.querySelector('.navbar');
+
+        menuIcon.onclick = () => {
+            menuIcon.classList.toggle('bx-x');
+            navbar.classList.toggle('active');
+
+        }
+
+
+
+
+        //SCROLL SECTIONS
+
+        let sections = document.querySelectorAll('section');
+        let navLinks = document.querySelectorAll('header nav a');
+
+
+
+
+        window.onscroll = () => {
+
+            sections.forEach(sec => {
+                let top = window.scrollY;
+                let offset = sec.offsetTop - 100;
+                let height = sec.offsetHeight;
+                let id = sec.getAttribute('id');
+
+                if (top >= offset && top < offset + height) {
+                    //active navbar links
+                    navLinks.forEach(links => {
+                        links.classList.remove('active');
+
+                        document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+                    });
+
+                    //active sections for animation on scroll
+
+                    sec.classList.add('showAnimate');
+
+
+                }
+
+                //if you want to use animation that repeats on scroll use this
+                else {
+                    sec.classList.remove('showAnimate');
+
+                }
+
+
+            });
+            //sticky header
+            let header = document.querySelector('header');
+
+            header.classList.toggle('sticky', window.scrollY > 100);
+
+            //remove toggle icon and navbar when click navbar links(scroll)
+
+            menuIcon.classList.remove('bx-x');
+            navbar.classList.remove('active');
+
+
+        }
+
+    </script>
+</body>
+
+</html>

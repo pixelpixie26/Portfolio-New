@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="strict-origin" />
+    <!-- Pro CDN references and other meta, styling, and scripty bits -->
+    <title>Linkedin Clone in JavaScript HTML & CSS</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"
+    />
+
+    
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer ></script>
+  </head>
+
+  <body>
+    <nav class="navBar">
+      <div class="navbarLeft">
+        <a href="#" class="logo">
+          <img src="images/logo.png" alt="" />
+        </a>
+
+        <div class="searchBox">
+          <i class="fa fa-search fa-xs"></i>
+          <input type="text" placeholder="Search" />
+        </div>
+      </div>
+      <div class="navbarCenter">
+        <ul>
+          <li>
+            <a href="#" class="activeLink">
+              <img src="images/home.png" alt="" />
+              <span>Home</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="profile.html" target="_blank">
+              <img src="images/network.png" alt="" />
+              <span>My Network</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="profile.html" target="_blank">
+              <img src="images/jobs.png" alt="" />
+              <span>Jobs</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="profile.html" target="_blank">
+              <img src="images/message.png" alt="" />
+              <span>Messaging</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="profile.html" target="_blank">
+              <img src="images/notification.png" alt="" />
+              <span>Notifications</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="navbarRight">
+        <div class="online">
+          <img src="images/user1.jpg" alt="" class="navProfileImage" />
+        </div>
+      </div>
+      <!------------PROFILE DROP DOWN MENU---------------------->
+      <div class="profileMenuWrap">
+        <div class="profileMenu">
+          <div class="userInfo">
+            <img src="images/user1.jpg" alt="" />
+            <div>
+              <h3>Rohan Sharma</h3>
+              <a href="profile.html" >See your profile</a>
+            </div>
+          </div>
+
+          <hr />
+
+          <a href="#" class="profileMenuLink">
+            <i class="far fa-comment-edit"></i>
+            <p>Give Feedback</p>
+            <span>></span>
+          </a>
+
+          <a href="#" class="profileMenuLink">
+            <i class="fas fa-wrench"></i>
+            <p>Settings & Privacy</p>
+            <span>></span>
+          </a>
+
+          <a href="#" class="profileMenuLink">
+            <i class="fas fa-question-circle"></i>
+            <p>Help & Support</p>
+            <span>></span>
+          </a>
+
+          <a href="#" class="profileMenuLink">
+            <i class="fas fa-moon"></i>
+            <p>Display & Access</p>
+            <span>></span>
+          </a>
+
+          <a href="#" class="profileMenuLink">
+            <i class="fas fa-sign-out-alt"></i>
+            <p>Logout</p>
+            <span>></span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!---------------------------NAVBAR CLOSE----------------------------->
+
+    <div class="container">
+      <!----------------LEFT SIDEBAR---------------------->
+      <div class="leftSideBar">
+        <div class="sidebarProfileBox">
+          <img src="images/coverpic.png" style="width: 100%" />
+
+          <!-------SIDEBAR PROFILE INFO STARTS HERE-->
+          <div class="sidebarProfileInfo">
+            <img src="images/user1.jpg" alt="" />
+            <h1>Rohan Sharma</h1>
+            <h3>Web Developer at The Muse</h3>
+            <ul>
+              <li>Your profile views <span>118</span></li>
+
+              <li>Your post views <span>320</span></li>
+
+              <li>Your connections <span>555</span></li>
+            </ul>
+          </div>
+
+          <!-------------------SIDEBAR PROFILE LINK STARTS HERE---->
+
+          <div class="sidebarProfileLink">
+            <a href="#">
+              <i class="fa-solid fa-bookmark"></i>
+              My Items
+            </a>
+
+            <a href="#">
+              <i class="fa-solid fa-gem"></i>
+              Try Premium
+            </a>
+          </div>
+        </div>
+        <div class="sidebarActivity" id="sideBarActivity">
+          <h3>RECENT</h3>
+          <a href="#">
+            <i class="fa fa-history"></i>
+            Group Learning
+          </a>
+
+          <a href="#">
+            <i class="fa fa-history"> </i>
+            Web Development
+          </a>
+
+          <a href="#">
+            <i class="fa fa-history"> </i>
+            Code Better
+          </a>
+
+          <a href="#">
+            <i class="fa fa-history"></i>
+            User Interface
+          </a>
+
+          <a href="#">
+            <i class="fa fa-history"> </i>
+            Online Learning
+          </a>
+          <h3>GROUPS</h3>
+          <a href="#"><i class="fa fa-users"></i> React & Node JS Learners</a>
+          <a href="#"><i class="fa fa-users"></i> Python & JavaScript Coding</a>
+          <a href="#"><i class="fa fa-users"></i> Learn Coding Online</a>
+          <a href="#"><i class="fa fa-users"></i> Full Stack Developer Group</a>
+
+          <h3>HASHTAG</h3>
+          <a href="#"><i class="fa fa-hashtag"></i> onlinelearners</a>
+          <a href="#"><i class="fa fa-hashtag"></i> fullstackdevelopers</a>
+          <a href="#"><i class="fa fa-hashtag"></i> frontenddeveloper</a>
+          <a href="#"><i class="fa fa-hashtag"></i> backenddeveloper</a>
+          <a href="#"><i class="fa fa-hashtag"></i> devops</a>
+
+          <div class="discoverMore">
+            <a href="profile.html">Discover More</a>
+          </div>
+        </div>
+
+        <p id="showMoreLink">Show More <b>+</b></p>
+      </div>
+      <!----------------MAIN CONTENT---------------------->
+
+      <div class="mainContent">
+        <div class="createPost">
+          <div class="createPostInput">
+            <img src="images/user1.jpg" alt="" />
+            <textarea rows="2" placeholder="Write a post"></textarea>
+          </div>
+
+          <div class="createPostLinks">
+            <li><i class="fa-solid fa-camera"></i>Photo</li>
+            <li><i class="fa-solid fa-video"></i>Video</li>
+            <li><i class="fa-solid fa-calendar-check"></i>Event</li>
+            <li>Post</li>
+          </div>
+        </div>
+
+        <div class="sortBy">
+          <hr />
+          <p>
+            Sort by : <span>top <i class="fa-solid fa-caret-down"></i> </span>
+          </p>
+        </div>
+
+        <div class="post">
+          <div class="postAuthor">
+            <img src="images/user3.jpg" alt="" />
+            <div>
+              <h1>Damon Thomas</h1>
+              <small>Full Stack Developer at IBM</small>
+              <small>10 hours ago</small>
+            </div>
+          </div>
+
+          <p>
+            Creating smarter solutions, faster. Empowering the digital world.
+            Building bridges between technology and society. Software that makes
+            a difference.
+          </p>
+          <img src="images/postimage1.jpg" alt=""  class="postimg"/>
+
+          <div class="postStats">
+            <div>
+              <i class="fa-solid fa-thumbs-up"> </i>
+              <i class="fa-solid fa-heart"></i>
+              <i class="fa-solid fa-hands-clapping"></i>
+              <span class="likedUsers">Rohini Mitra and 180 others</span>
+            </div>
+
+            <div>
+              <span> 322 comments &middot; 220 shares </span>
+            </div>
+          </div>
+
+          <div class="postActivity">
+            <div>
+              <img src="images/user1.jpg" alt="" class="postActivityUserIcon" />
+              <i
+                class="fa-solid fa-caret-down"
+                class="postActivityArrowDownIcon"
+              >
+              </i>
+            </div>
+            <div class="postActivityLink">
+              <i class="fa-solid fa-thumbs-up"> </i>
+              <span>Like</span>
+            </div>
+            <div class="postActivityLink">
+              <i class="fa-solid fa-comment"> </i>
+              <span>Comment</span>
+            </div>
+            <div class="postActivityLink">
+              <i class="fa-solid fa-share"> </i>
+              <span>Share</span>
+            </div>
+            <div class="postActivityLink">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Send</span>
+            </div>
+          </div>
+        </div>
+
+        <!---second post-->
+        <div class="post">
+          <div class="postAuthor">
+            <img src="images/user2.jpg" alt="" />
+            <div>
+              <h1>Prajakta Mukherjee</h1>
+              <small>UI/UX Developer</small>
+              <small>1 day ago</small>
+            </div>
+          </div>
+
+          <p>
+            It’s essential to design not just for the average user, but for all
+            users. This means considering users with visual impairments, for
+            example, as well as taking situational impairments — such as
+            background noise — into account.
+          </p>
+          <img src="images/postimage2.jpg" alt="" class="postimg"/>
+
+          <div class="postStats">
+            <div>
+              <i class="fa-solid fa-thumbs-up"> </i>
+              <i class="fa-solid fa-heart"></i>
+              <i class="fa-solid fa-hands-clapping"></i>
+              <span class="likedUsers">Aksahy Modi and 610 others</span>
+            </div>
+
+            <div>
+              <span> 112 comments &middot; 90 shares </span>
+            </div>
+          </div>
+
+          <div class="postActivity">
+            <div>
+              <img src="images/user1.jpg" alt="" class="postActivityUserIcon" />
+              <i
+                class="fa-solid fa-caret-down"
+                class="postActivityArrowDownIcon"
+              >
+              </i>
+            </div>
+            <div class="postActivityLink">
+              <i class="fa-solid fa-thumbs-up"> </i>
+              <span>Like</span>
+            </div>
+            <div class="postActivityLink">
+              <i class="fa-solid fa-comment"> </i>
+              <span>Comment</span>
+            </div>
+            <div class="postActivityLink">
+              <i class="fa-solid fa-share"> </i>
+              <span>Share</span>
+            </div>
+            <div class="postActivityLink">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Send</span>
+            </div>
+          </div>
+        </div>
+
+        <!---third post-->
+        <div class="post">
+          <div class="postAuthor">
+            <img src="images/user4.jpg" alt="" />
+            <div>
+              <h1>Mahendra Shah</h1>
+              <small>Devops Engineer</small>
+              <small>3 day ago</small>
+            </div>
+          </div>
+
+          <p>
+            Programmers don't burn out on hard work, they burn out on
+            change-with-the-wind directives and not 'shipping'.The most powerful
+            tool we have as developers is automation. The key in such a
+            transition to continuous delivery is to expect things to get worse
+            before you'll be able to make them better.
+          </p>
+          <img src="images/postimage3.jpg" alt="" class="postimg"/>
+
+          <div class="postStats">
+            <div>
+              <i class="fa-solid fa-thumbs-up"> </i>
+              <i class="fa-solid fa-heart"></i>
+              <i class="fa-solid fa-hands-clapping"></i>
+              <span class="likedUsers">Isha Desai and 1123 others</span>
+            </div>
+
+            <div>
+              <span> 712 comments &middot; 520 shares </span>
+            </div>
+          </div>
+
+          <div class="postActivity">
+            <div>
+              <img src="images/user1.jpg" alt="" class="postActivityUserIcon "" />
+              <i
+                class="fa-solid fa-caret-down"
+                class="postActivityArrowDownIcon"
+              >
+              </i>
+            </div>
+            <div class="postActivityLink">
+              <i class="fa-solid fa-thumbs-up"> </i>
+              <span>Like</span>
+            </div>
+            <div class="postActivityLink">
+              <i class="fa-solid fa-comment"> </i>
+              <span>Comment</span>
+            </div>
+            <div class="postActivityLink">
+              <i class="fa-solid fa-share"> </i>
+              <span>Share</span>
+            </div>
+            <div class="postActivityLink">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Send</span>
+            </div>
+          </div>
+        </div>
+
+        <!---fourth post-->
+        <div class="post">
+          <div class="postAuthor">
+            <img src="images/user5.png" alt="" />
+            <div>
+              <h1>Lin Zhao</h1>
+              <small>Database Architect</small>
+              <small>5 day ago</small>
+            </div>
+          </div>
+
+          <p>
+            Data architecture translates business needs into data and system
+            requirements and seeks to manage data and its flow through the
+            enterprise. The goal of data architecture is to translate business
+            needs into data and system requirements and to manage data and its
+            flow through the enterprise.
+            <img src="images/postimage4.jpg" alt="" class="postimg"/>
+          </p>
+
+          <div class="postStats">
+            <div>
+              <i class="fa-solid fa-thumbs-up"> </i>
+              <i class="fa-solid fa-heart"></i>
+              <i class="fa-solid fa-hands-clapping"></i>
+              <span class="likedUsers">Patrick Crowthers and 2193 others</span>
+            </div>
+
+            <div>
+              <span> 1282 comments &middot; 894 shares </span>
+            </div>
+          </div>
+
+          <div class="postActivity">
+            <div>
+              <img src="images/user1.jpg" alt="" class="postActivityUserIcon" />
+              <i
+                class="fa-solid fa-caret-down"
+                class="postActivityArrowDownIcon"
+              >
+              </i>
+            </div>
+            <div class="postActivityLink">
+              <i class="fa-solid fa-thumbs-up"> </i>
+              <span>Like</span>
+            </div>
+            <div class="postActivityLink">
+              <i class="fa-solid fa-comment"> </i>
+              <span>Comment</span>
+            </div>
+            <div class="postActivityLink">
+              <i class="fa-solid fa-share"> </i>
+              <span>Share</span>
+            </div>
+            <div class="postActivityLink">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Send</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!----------------RIGHT SIDEBAR---------------------->
+
+      <div class="rightSideBar">
+        <div class="sidebarNews">
+          <i class="fa fa-info-circle" class="infoIcon"></i>
+          <h3>Trending News</h3>
+
+          <a href="#">Increasing demand for web developers</a>
+          <span>1hour ago &middot; 2,000 readers</span>
+
+          <a href="#">Career Growth in I.T Companies</a>
+          <span>1d ago &middot; 30,000 readers</span>
+
+          <a href="#">Easy process for US work visa</a>
+          <span>3d ago &middot; 10,560,90 readers</span>
+
+          <a href="#">Does more hiring is higher confidence too ?</a>
+          <span>4hour ago &middot; 62,000 readers</span>
+
+          <a href="#">Mukesh Ambani is the world's fifth richest</a>
+          <span>10hour ago &middot; 55,000 readers</span>
+
+          <a href="#" class="readMoreLink">Read More</a>
+        </div>
+
+        <!---sidebar news closing here-->
+        <!------sidebar ADVERTISEMENT----->
+        <div class="sidebarAd">
+          <small>Ad &middot; &middot; &middot;</small>
+          <p>Where ideas meet execution.</p>
+          <div>
+            <img src="images/user1.jpg" alt="" />
+            <img
+              src="images/saskpolylogo.jpg"
+              alt=""
+              style="width: 90px; height: 60px"
+            />
+          </div>
+
+          <b>Get the best out of your knowledge with Saskpolytech</b>
+          <a href="#" class="addLink">Learn More</a>
+        </div>
+
+        <div class="sidebarUsefulLinks">
+          <a href="#">About</a>
+          <a href="#">Advertising</a>
+          <a href="#">Get the App</a>
+          <a href="#">Accessibility</a>
+          <a href="#">Help Center</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">More</a>
+
+          <div class="copyRight ">
+            <img src="images/logo.png" alt="" />
+            <p>Linkedin &#169; IshaDesaiCrowthers 2023. All rights reserved</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

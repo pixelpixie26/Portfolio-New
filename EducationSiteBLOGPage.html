@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta charset="utf-8" />
+    <title>BLOG Manipal University </title>
+    <link href="EducationSiteStyleSheet.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="EducationSite.html"><img src="Education Site Images//logoUni.png" style=" " /></a>
+            <div class="nav-links" id="navlinks">
+                <i class="fa-solid fa-rectangle-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="EducationSite.html">HOME</a></li>
+                    <li><a href="EducationSiteAbout.html">ABOUT</a></li>
+                    <li><a href="EducationSiteCoursePage.html">COURSE</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="EducationSiteContact.html">CONTACT</a></li>
+
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Our Certificates & Programs for 2023</h1>
+    </section>
+
+
+
+    <!-----------------------------BLOG PAGE CONTENT -------------------------------------------------->
+
+
+    <section class="blog-content">
+
+        <div class="row">
+            <div class="blog-left">
+                <img src="Education Site Images/certificate.jpg" />
+                <h2>Our Certificates & Programs for 2023</h2>
+                <p>
+                    With more than 160 programs and 500 career options,
+                    Manipal University has many ways for you to pursue your goals.
+                    Whether you are preparing for a career or further education,
+                    we can help you achieve it.
+                    Our range of credentials and flexible learning options allow you
+                    to choose your own path of study and learn in a way that works for you.
+                    Graduate and professional studies at Manipal University prepare students for leadership positions 
+                    in research, education and professional practice. Students can choose from a wide array of master’s, 
+                    PhD, dual-degree and graduate certificate programs in our distinguished liberal arts college or 20 professional schools.
+
+                </p>
+
+                <div class="comment-box">
+                    <h3>Leave A Comment</h3>
+                    <form class="comment-form">
+                        <input type="text" placeholder="Enter Name" />
+                        <input type="email" placeholder="Enter Email" />
+                        <textarea rows="5" placeholder="Your Comment"></textarea>
+                        <button type="submit" class="hero-btn red-btn">POST COMMENT</button>
+                    </form>
+
+                </div>
+            </div>
+
+
+            <div class="blog-right">
+                <h3>Post Categories</h3>
+                <div>
+                    <span>Business Analyitics</span>
+                    <span>21</span>
+                    </div>
+                <div>
+                    <span>Data Science</span>
+                    <span>15</span>
+</div>
+                <div>
+                    <span>Machine Learning</span>
+                    <span>21</span>
+</div>
+                <div>
+                    <span>Computer Science</span>
+                    <span>34</span>
+                    </div>
+                <div>
+                    <span>Auto CAD</span>
+                    <span>42</span>
+</div>
+                <div>
+                    <span>Veterinary Technician</span>
+                    <span>58</span>
+</div>
+                <div>
+                    <span>Tourism - Travel</span>
+                    <span>828</span>
+</div>
+                <div>
+                    <span>Social Service Worker</span>
+                    <span>995</span>
+</div>
+                <div>
+                    <span>Public Relations</span>
+                    <span>78</span>
+</div>
+                <div>
+                    <span>Personal Support Worker</span>
+                    <span>H932</span>
+</div>
+                <div>
+                    <span>Personal Support Worker</span>
+                    <span>K933</span>
+</div>
+                <div>
+                    <span> Personal Support Worker - Accelerated </span>
+                    <span>H990A</span>
+</div>
+                <div>
+                    <span>Personal Support Worker - Accelerated</span>
+                    <span>K990A</span>
+</div>
+                <div>
+                    <span>Pharmacy Technician</span>
+                    <span>H812</span>
+</div>
+                <div>
+                    <span>Plumbing Techniques </span>
+                    <span>T954</span>
+</div>
+                <div>
+                    <span> Police Foundations</span>
+                    <span>B819</span>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+    <!-----------------------------FOOTER -------------------------------------------------->
+
+    <section class="footer">
+
+        <h4>About US</h4>
+        <p>
+            Manipal Institutions have long been distinguished for excellence in professional education.
+            The University is home to some of the top ranking institutions across diverse disciplines."
+            <br />            <br />
+            <br />
+
+            <b>Vision</b>
+            <br />
+            Global leadership in human development, excellence in education and healthcare.
+            <br />
+            <br />
+            <br />
+
+            <b>Mission</b>
+            <br />
+            Be the most preferred choice of students, faculty and industry.<br />
+            Be in the top 10 in every discipline of education health sciences, engineering and management.
+
+        </p>
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+
+
+
+        </div>
+
+        <p>
+            WebSite Created by @IshaDesaiCrowthers             <i class="fa-solid fa-glasses"></i>
+        </p>
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!-----------------------------JAVA SCRIPT FOR TOGGLE MENU-------------------------------------------------->
+
+    <script>
+
+        var navlinks = document.getElementById("navlinks");
+
+        function showMenu() {
+            navlinks.style.right = "0";
+        }
+        function hideMenu() {
+            navlinks.style.right = "-200px";
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Google Maps API Directions Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/v5-font-face.min.css"
+    />
+
+    <!-- Latest compiled and minified CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      /* 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
+      #map {
+        height: 60%;
+        position: relative;
+        top: 35%;
+        width: 80%;
+        left: 5%;
+        cursor: pointer;
+      }
+
+      /* 
+ * Optional: Makes the sample page fill the window. 
+ */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(580deg, #d5dcf2, #fff);
+      }
+
+      #floating-panel {
+        position: absolute;
+        background-color: transparent;
+        margin: 0;
+        padding: 10px;
+        top: 10px;
+        left: 25%;
+        z-index: 5;
+        text-align: center;
+        font-family: "Roboto", "sans-serif";
+        line-height: 30px;
+        padding-left: 10px;
+      }
+      .card {
+        position: absolute;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        top: 60%;
+        z-index: 200;
+        left: 5%;
+      }
+
+      #output {
+        position: relative;
+        left: 3%;
+        display: none;
+        background-color: rgb(239 235 233);
+        top: 0%;
+        box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.2),
+          inset 2px 2px 2px rgba(0, 0, 0, 0.2),
+          10px 10px 10px rgba(0, 0, 0, 0.2);
+        padding: inherit;
+      }
+      .far.fa-dot-circle,
+      .fas.fa-map-marker {
+        top: 65%;
+        color: red;
+      }
+      #directions {
+        color: red;
+        background: rgb(194, 212, 239);
+        font-size: 20px;
+        border-radius: 10px;
+      }
+      .group1,
+      .group2 {
+        position: relative;
+        margin-bottom: 20px;
+        margin-right: 10px;
+        margin-right: 20px;
+
+        align-items: center;
+        justify-content: center;
+        padding: 0 10px;
+      }
+
+      .group1 {
+        margin-right: 110px;
+      }
+      value {
+        text-transform: lowercase;
+      }
+      .custom-map-control-button {
+        background-color: #fff;
+        border: 0;
+        border-radius: 2px;
+        box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+        margin: 10px;
+        padding: 0 0.5em;
+        font: 400 18px Roboto, Arial, sans-serif;
+        overflow: hidden;
+        height: 40px;
+        cursor: pointer;
+      }
+      .custom-map-control-button:hover {
+        background: rgb(235, 235, 235);
+      }
+     
+    </style>
+  </head>
+  <body>
+    <div id="floating-panel">
+      <h1>Find The Distance Between Two Places</h1>
+      <p>
+        This App will help you calculate your travelling distance. <br /><small
+          style="color: rgb(113, 109, 109)"
+          >Created By Isha Desai Crowthers</small
+        >
+      </p>
+      <div class="group1">
+        <label for="start">Origin</label>
+        <i class="far fa-dot-circle"></i>
+
+        <input type="text" id="start" placeholder="start" />
+      </div>
+      <div class="group2">
+        <label for="end">Destination</label>
+        <i class="fas fa-map-marker"></i>
+
+        <input type="text" id="end" placeholder="end" />
+
+        <select id="mode">
+          <option value="DRIVING">Driving</option>
+          <option value="WALKING">Walking</option>
+          <option value="BICYCLING">Bicycling</option>
+          <option value="TRANSIT">Transit</option>
+        </select>
+
+        <button id="directions"><i class="fas fa-directions"></i></button>
+
+       
+      </div>
+    </div>
+    <div class="card-deck">
+      <div class="card">
+        <div class="card-body">
+          <label id="output"></label>
+        </div>
+      </div>
+    </div>
+    
+    <div id="map"></div>
+
+    <!-- 
+        The `defer` attribute causes the callback to execute after the full HTML
+        document has been parsed. For non-blocking uses, avoiding race conditions,
+        and consistent behavior across browsers, consider loading using Promises.
+        See https://developers.google.com/maps/documentation/javascript/load-maps-js-api
+        for more information.
+        -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMzJP2kQt4dyrR7ln9yoS1Dhe4FuF0WuA&callback=initMap&v=weekly&libraries=places"
+      defer
+    ></script>
+
+    <script src="app.js"></script>
+  </body>
+</html>

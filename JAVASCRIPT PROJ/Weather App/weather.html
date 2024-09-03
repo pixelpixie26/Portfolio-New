@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,500;1,700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url('/Portfolio/JAVASCRIPT PROJ/Weather App/weather3.gif') no-repeat fixed;
+    background-size: cover;
+    /* <------ */
+    background-position: right top;
+}
+
+.wrapper {
+    width: 400px;
+    border-radius: 7px;
+    background: #fff;
+}
+
+.wrapper header {
+    color: #43affc;
+    font-size: 21px;
+    font-weight: 500;
+    padding: 16px 15px;
+    align-items: center;
+    display: flex;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+header i {
+    cursor: pointer;
+    font-size: 0px;
+    margin-right: 8px;
+}
+.wrapper.active header i{
+    font-size: 30px;
+    margin-left: 5px;
+}
+
+.wrapper .input-part {
+    margin: 20px 25px 30px;
+   /*display:none; */
+}
+
+.wrapper.active .input-part{
+    display: none;
+}
+
+
+.input-part :where(input, button) {
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    border-radius: 7px;
+}
+
+.input-part .info-txt{
+    font-size:17px;
+    text-align:center;
+    padding: 12px 10px;
+    border-radius:7px;
+    margin-bottom: 15px;
+    display:none;
+}
+
+.info-txt.error{
+    display:block;
+    color:#721c24;
+    background:#f8d7da;
+    border:1px solid #f5c6cc;
+
+}
+.info-txt.pending{
+    display:block;
+    color: #0a4a56;
+    background:#c8e1e6;
+    border:1px solid #accfd4;
+
+}
+
+.input-part input {
+    text-align: center;
+    border: 1px solid #bfbfbf;
+
+}
+
+.input-part input:is(:focus, :valid){
+    border:2px solid #43affc;
+}
+
+.input-part .seperator {
+    height: 1px;
+    width: 100%;
+    margin:25px 0;
+    background: #ccc;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.seperator::before{
+    content: "or";
+    padding: 0 15px;
+    background: #fff;
+    
+    position: absolute;
+}
+
+.input-part button {
+    color: #fff;
+    cursor: pointer;
+    background: #43affc;
+    margin-top: 90px;
+}
+
+
+/*------------WEATHER DETAILS INFO SECTION-----*/
+
+.wrapper .weather-part{
+    margin:30px 0 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.wrapper.active .weather-part{
+    display: flex;
+}
+
+.weather-part img{
+    max-width:125px;
+
+}
+
+.weather-part .temp{
+    display: flex;
+    font-size: 72px;
+    font-weight: 500;
+}
+
+.weather-part .temp .numb{
+    font-weight: 600;
+
+}
+
+.weather-part .temp .deg{
+    font-size: 40px;
+    margin: 10px 5px 0 0;
+    display:block;
+}
+.weather-part .weather{
+    font-size: 21px;
+    text-align: center;
+    margin: -5px 20px 15px ;
+}
+
+.weather-part .location{
+    display: flex;
+    align-items: center;
+    font-size: 21px;
+    margin-bottom: 30px;
+
+}
+
+.location i{
+    font-size: 22px;
+    margin-right: 5px;
+
+}
+.weather-part .bottom-details{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #bfbfbf;
+    justify-content: space-between;
+}
+
+.bottom-details .column{
+    width: 100%;
+    display: flex;
+    padding: 15px 0;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.column i{
+    font-size: 40px;
+    color: #43affc;
+
+}
+
+.column.humidity{
+    border-left: 1px solid #bfbfbf;
+
+}
+
+.details .temp, .humidity span{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top:-3px;
+}
+.details .temp .deg{
+    margin: 0;
+    font-size:17px;
+    padding:0 2px 0 1px;
+}
+
+.details p{
+    font-size:14px;
+    margin-top:6px;
+
+}
+    </style>
+
+
+</head>
+<body>
+
+    <div class="wrapper">
+        <header>
+            <i class="bx bx-left-arrow-alt">
+            </i>
+            Weather App
+
+          
+        </header>
+
+        <section class="input-part">
+            <p class="info-txt"><!--Please Enter a valid city--></p>
+            <input type="text" placeholder="Enter city name" spellcheck="false" required>
+            <div class="seperator">
+                <button>Get Device Location</button>
+            </div>
+
+        </section>
+
+        <section class="weather-part">
+           <img src="#" alt="weather icon"> 
+            <div class="temp">
+                <span class="numb">_</span>
+                <span class="deg">&deg;</span>C
+            </div>
+
+            <div class="weather">_ _</div>
+            <div class="location">
+                <i class="bx bx-map"></i>
+                <span>_, _</span>
+            </div>
+
+            <div class="bottom-details">
+                <div class="column feels">
+                    <i class="bx bxs-thermometer">
+                    </i>
+                    <div class="details">
+                        <div class="temp">
+                            <span class="numb-2">_</span>
+                            <span class="deg">&deg;</span>C
+                        </div>
+            
+                    <p> Feels like </p>
+
+                    </div>
+                </div>
+
+
+
+                <div class="column humidity">
+                    <i class="bx bxs-droplet-half">
+                    </i>
+                    <div class="details">
+                            <span>_</span>
+                      
+          
+                    <p> Humidity </p>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const wrapper=document.querySelector(".wrapper"),
+      inputPart=wrapper.querySelector(".input-part"),
+      infoTxt=inputPart.querySelector(".info-txt"),
+      inputField=inputPart.querySelector("input"),
+      locationBtn=inputPart.querySelector("button"),
+      wIcon=document.querySelector(".weather-part img"),
+      arrowBack= wrapper.querySelector("header i");
+
+
+      let apiKey2='b0aabd6309ddf18b1387400e07538cb6';
+      let api;
+
+      inputField.addEventListener('keyup', e=>{
+
+            //If user pressed enter button and input value is not empty
+            if (e.key == "Enter" && inputField.value != "") {
+                requestApi(inputField.value);
+            } 
+      });
+
+      locationBtn.addEventListener('click',()=>{
+            if(navigator.geolocation){ //if browser supports geoLOCATION API
+                 navigator.geolocation.getCurrentPosition(onSuccess, onError);
+            } else{
+                alert("Your Browser does not support geolocation api");
+            }
+      });
+
+      function onSuccess(position){
+      //  console.log(position);
+
+      const {latitude,longitude}=position.coords;
+      //getting lat and lon of the user device from the coords object
+
+         api=`http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey2}`;
+         fetchData();
+    }
+
+      function onError(error){
+        infoTxt.innerText=error.message;
+        infoTxt.classList.add("error");
+      }
+
+
+      function requestApi(city){
+        //console.log(city);
+
+
+      //  let apiKey='2d3bfa790b1b4e0c998225025232006';
+        //let apiCode=`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`;
+         
+         api=`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey2}`;
+
+        fetchData();
+    }
+
+    function fetchData(){
+        infoTxt.innerText="Getting weather details....";
+        infoTxt.classList.add("pending");
+
+      //getting api response and returning it with parsing into js obj and in a↗ 
+      //then function calling weatherDetails function with passing api result as an argument
+      
+        fetch(api).then(response => response.json()).then(result => weatherDetails(result));
+      
+    }
+
+
+    function weatherDetails(info){
+        infoTxt.classList.replace("pending","error");
+        if(info.cod == "404"){
+            infoTxt.innerText=`${inputField.value} isnt a valid city`;
+
+        }else{
+            //lets get required properties from the info object
+
+            const city=info.name;
+            const country=info.sys.country;
+            const {description,id}=info.weather[0];
+            const {feels_like, humidity,temp}=info.main;
+            const {icon}=info.weather[0];
+
+            //to make image dynamic from openweather api icons 
+
+            if(id==800 && icon=="01d"){
+                wIcon.src="http://openweathermap.org/img/wn/01d@2x.png";
+
+            }else  if(id==800 && icon=="01n"){
+                wIcon.src="http://openweathermap.org/img/wn/01n@2x.png";
+            }
+            else if(id >= 200 && id <=232){
+                wIcon.src="http://openweathermap.org/img/wn/11d@2x.png";
+            }
+            else if(id >= 600 && id <=622){
+                wIcon.src="http://openweathermap.org/img/wn/13d@2x.png";
+            }else if(id >= 701 && id <=781){
+                wIcon.src="http://openweathermap.org/img/wn/50d@2x.png";
+            }else if(id >= 801 && description=="few clouds" && icon=="02d" || icon=="03d" || icon=="04d"){
+                wIcon.src="http://openweathermap.org/img/wn/02d@2x.png";
+            }else if(id == 801 && description=="few clouds" && icon=="02n" || icon=="03n" || icon=="04n"){
+                wIcon.src="http://openweathermap.org/img/wn/02n@2x.png";
+            }
+
+            else if(id == 802 && description=="scattered clouds"){
+                wIcon.src="http://openweathermap.org/img/wn/03n@2x.png";
+            }
+            else if(id == 803 && description=="broken clouds"){
+                wIcon.src="http://openweathermap.org/img/wn/04n@2x.png";
+            }
+            else if(id == 804 && description=="overcast clouds"){
+                wIcon.src="http://openweathermap.org/img/wn/04n@2x.png";
+            }
+
+            
+            else if(id >= 300 && id <=321 && icon=="10d"){
+                wIcon.src="http://openweathermap.org/img/wn/10d@2x.png";
+            }
+            else if(id >= 300 && id <=321 && icon=="10n"){
+                wIcon.src="http://openweathermap.org/img/wn/10n@2x.png";
+            }
+
+
+            //lets pass this values to a particular html element 
+            wrapper.querySelector(".temp .numb").innerText = Math.floor(temp);
+            wrapper.querySelector(".weather").innerText = description;
+            wrapper.querySelector(".location span").innerText = `${city}, ${country}`;
+            wrapper.querySelector(".temp .numb-2").innerText = Math.floor(feels_like);
+            wrapper.querySelector(".humidity span").innerText = `${humidity}%`;
+
+
+            infoTxt.classList.remove("pending","error");
+            wrapper.classList.add("active");
+        }
+
+        console.log(info);
+    }
+
+    arrowBack.addEventListener("click",()=>{
+        wrapper.classList.remove("active");
+    });
+
+
+    </script>
+</body>
+</html>

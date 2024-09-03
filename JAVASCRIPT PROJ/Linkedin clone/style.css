@@ -1,0 +1,1075 @@
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,800&family=Poppins:ital,wght@0,500;0,600;0,900;1,500;1,900&display=swap');
+
+  * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      box-sizing: border-box;
+  }
+
+  body {
+      background: #f0f2f5;
+      color: #5f5f5f;
+
+  }
+
+  a {
+      text-decoration: none;
+      color: #5f5f5f;
+  }
+
+  .navBar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      padding: 6px 6%;
+      position: sticky;
+      z-index: 100;
+      top: 0;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+
+  }
+
+  .logo img {
+      width: 30px;
+      margin-right: 15px;
+      display: block;
+
+  }
+  .logo{
+    pointer-events: none;
+  }
+
+  .navbarCenter ul li {
+      display: inline-block;
+      list-style: none;
+
+  }
+
+  .navbarCenter ul li a {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      margin: 5px 8px;
+      padding-right: 5px;
+      position: relative;
+      pointer-events: none;
+
+  }
+
+  .navbarCenter ul li a img {
+      width: 30px;
+  }
+
+  .navbarCenter ul li a::after {
+      content: '';
+      width: 0%;
+      height: 2px;
+      background: #1a83fa;
+      position: absolute;
+      bottom: -15px;
+      transition: width 0.3s;
+  }
+
+  
+
+  .navbarCenter ul li a:hover::after,
+  .navbarCenter ul li a.activeLink::after {
+      width: 100%;
+  }
+
+
+  .navProfileImage {
+      width: 40px;
+      border-radius: 50%;
+      display: block;
+      cursor: pointer;
+      position: relative;
+  }
+
+  .online {
+      position: relative;
+
+  }
+
+  .online::after {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      right: 0px;
+      top: 0px;
+      background: #a657f1;
+      position: absolute;
+  }
+/*------PROFILE DROPDOWN MENU------------*/
+  .profileMenuWrap{
+    position: absolute;
+    top:100%;
+    right:5%;
+    width:320px;
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.5s;
+  }
+
+  .profileMenuWrap.active{
+    max-height:400px;
+  }
+
+  .profileMenu{
+    background: #515050;
+    color:#fff;
+    padding:20px;
+    margin:10px;
+
+  }
+
+  .userInfo{
+    display: flex;
+    align-items:center;
+  }
+  .userInfo a{
+    color:#fff;
+    font-size:13px;
+  }
+
+  .userInfo img{
+    width:50px;
+    border-radius:50%;
+    margin-right:15px;
+  }
+
+  .userInfo h3{
+    font-weight:500;
+    margin-bottom:-7px;
+  }
+  .profileMenu hr{
+    border:0;
+    height:1px;
+    width:100%;
+    background:#fff;
+    margin:15px 0 10px;
+  }
+
+  .profileMenuLink{
+    display: flex;
+    align-items:center;
+    color:#fff;
+    margin:12px 0;
+    font-size:14px;
+    pointer-events: none;
+  }
+
+
+  .profileMenuLink p{
+    width:100%;
+  }
+
+  .profileMenuLink i{
+    color:#fff;
+    margin-right:15px;
+    font-size:20px;
+  }
+  .searchBox {
+      background: #1a83fa;
+      width: 250px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      padding: 0 15px;
+
+  }
+
+  .navbarLeft {
+      display: flex;
+      align-items: center;
+  }
+
+  .searchBox img {
+      width: 14px;
+
+  }
+
+  .searchBox input {
+      width: 100%;
+      background: transparent;
+      padding: 8px;
+      outline: none;
+      border: none;
+      color: white;
+  }
+
+  .searchBox input::placeholder {
+      color: #ffff;
+  }
+
+  .searchBox i {
+      color: #fff;
+  }
+
+  /*------------------NAVBAR ENDS -------------------------*/
+
+  .container {
+      padding: 20px 1%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  }
+
+  .container1 {
+    padding: 20px 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left:320px;
+}
+
+  /*------------------LEFT SIDEBAR -------------------------*/
+
+  .leftSideBar {
+      flex-basis: 22%;
+      align-self: flex-start;
+      position:sticky;
+      top:73px;
+  }
+
+  .sidebarProfileBox {
+      background: #fff;
+  }
+
+  .sidebarProfileInfo {
+      padding: 0 25px;
+
+  }
+
+  .sidebarProfileInfo img {
+      width: 90px;
+      border-radius: 50%;
+      background: #fff;
+      padding: 4px;
+      margin-top: -45px;
+
+  }
+
+  .sidebarProfileInfo h1 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #181515;
+
+  }
+
+  .sidebarProfileInfo h3 {
+
+      font-size: 14px;
+      font-weight: 500;
+      color: #807f7f;
+  }
+
+  .sidebarProfileInfo ul {
+      list-style: none;
+      margin: 20px 0;
+
+  }
+
+  .sidebarProfileInfo ul li {
+      width: 100%;
+      margin: 5px 0;
+      font-size: 13px;
+      color: #807f7f;
+
+  }
+
+  .sidebarProfileInfo ul li span {
+      float: right;
+      color: #807f7f;
+
+
+  }
+
+  .sidebarProfileLink {
+      display: flex;
+      align-items: center;
+      border-top: 1px solid #ccc;
+
+  }
+
+  .sidebarProfileLink a {
+      flex-basis: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 0;
+      font-size: 13px;
+      border-left: 1px solid #ccc;
+      pointer-events: none;
+  }
+
+  .sidebarProfileLink a:first-child {
+      border-left: 0;
+  }
+
+  .sidebarProfileLink a i {
+      font-size: 20px;
+      margin-right: 10px;
+      pointer-events: none;
+  }
+
+  .fa-bookmark {
+      color: crimson;
+  }
+
+  .fa-gem {
+      color: goldenrod;
+  }
+
+  /*-------SIDEBAR ACTIVITY---*/
+
+  .sidebarActivity {
+      background: #fff;
+      padding: 5px 25px;
+      margin: 12px 0;
+      pointer-events:none;
+
+  }
+
+  .sidebarActivity h3 {
+      color: #777;
+      font-weight: 500;
+      font-size: 14px;
+      margin: 20px 0 10px;
+  }
+
+  .sidebarActivity a {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      font-weight: 500;
+      color: #888;
+      margin: 3px 0;
+      padding-bottom: 10px;
+  }
+
+  .sidebarActivity a i {
+      font-size: 13px;
+      margin-right: 10px;
+      color: #1a83fa;
+  }
+
+  .discoverMore {
+      border-top: 1px solid #ccc;
+      text-align: center;
+      margin-top: 20px;
+      margin-left: -25px;
+      margin-right: -25px;
+      pointer-events: visible;
+  }
+
+  .discoverMore a {
+      color: #1a83fa;
+      display: inline-block;
+      margin: 10px 0;
+      pointer-events: visible;
+
+  }
+
+
+
+
+  /*------------------RIGHT SIDEBAR -------------------------*/
+
+
+  .rightSideBar {
+      flex-basis: 25%;
+      align-self: flex-start;
+      position:sticky;
+      top:73px;
+  }
+
+  .rightSideBar .sidebarNews {
+      background: #fff;
+      padding: 10px 25px;
+  }
+
+  .fa-info-circle {
+      font-size: 15px;
+      color: #1a83fa;
+      margin-top: 15px;
+      float: right;
+  }
+
+  .sidebarNews h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #333;
+      margin: 10px 0 30px;
+  }
+
+  .sidebarNews a {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: 10px;
+  }
+
+  .sidebarNews span {
+      font-size: 12px;
+      color: #908e8e;
+
+  }
+
+
+  .readMoreLink {
+      color: #1a83fa;
+      font-weight: 500;
+      margin: 20px 0 10px;
+  }
+
+  .sidebarAd {
+      background: #fff;
+      padding: 15px 25px;
+      text-align: center;
+      margin: 12px 0;
+      font-size: 12px;
+  }
+
+  .sidebarAd img {
+      width: 60px;
+      border-radius: 50%;
+      margin: 4px;
+  }
+
+  .sidebarAd small {
+      float: right;
+      font-weight: 500;
+  }
+
+  .sidebarAd p {
+      margin-top: 30px;
+      margin-bottom: 10px;
+  }
+
+  .sidebarAd b {
+      display: block;
+      font-weight: 500;
+      margin-top: 10px;
+
+  }
+
+  .addLink {
+      display: inline-block;
+      border: 1px solid #1a83fa;
+      border-radius: 30px;
+      padding: 5px 15px;
+      color: #1a83fa;
+      font-weight: 500;
+      margin: 20px auto 10px;
+  }
+
+  .sidebarUsefulLinks {
+      padding: 15px 15px;
+      text-align: center;
+
+  }
+
+  .sidebarUsefulLinks a {
+      display: inline-block;
+      font-size: 14px;
+      margin: 4px 6px;
+      color: rgb(142, 158, 173);
+  }
+
+  .copyRight {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      margin-top: 10px;
+      font-weight: 500;
+  }
+
+  .copyRight img {
+      width: 18px;
+      margin-right: 4px;
+  }
+
+
+  /*------------------MAIN CONTENT -------------------------*/
+
+
+  .mainContent {
+      flex-basis: 47%;
+
+  }
+
+  .createPost {
+      background: #fff;
+
+  }
+
+  .createPostInput {
+      padding: 20px 25px 10px;
+      display: flex;
+      align-items: flex-start;
+
+  }
+
+  .createPostInput img {
+      width: 35px;
+      border-radius: 50%;
+      margin-right: 10px;
+  }
+
+  .createPostInput textarea {
+      width: 100%;
+      border: 0;
+      outline: 0;
+      resize: none;
+      /* disables textarea on scroll */
+      background: transparent;
+      margin-top: 8px;
+  }
+
+  ::placeholder {
+      font-weight: 500;
+  }
+
+  .createPostLinks {
+      display: flex;
+      align-items: flex-start;
+  }
+
+  .createPostLinks li {
+      list-style: none;
+      border-top: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+      flex-basis: 25%;
+      height: 40px;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+  }
+
+  .createPostLinks i {
+      margin-right: 5px;
+      color: #1a83fa;
+      font-size: 15px;
+  }
+
+  .createPostLinks li:last-child {
+      background-color: #1a83fa;
+      color: #fff;
+      border-top: 0;
+      border-right: 0;
+
+
+  }
+
+  .sortBy {
+
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+
+  }
+
+  .sortBy hr {
+      flex: 1;
+      border: 0;
+      height: 1px;
+      background: #ccc;
+
+  }
+
+  .sortBy p {
+      font-size: 13px;
+      padding-left: 5px;
+  }
+
+  .sortBy p span {
+
+      cursor: pointer;
+      font-weight: 600;
+  }
+
+  .sortBy p span i {
+      font-size: 12px;
+      margin-left: 3px;
+
+  }
+
+  .post {
+      background: #fff;
+      padding: 20px 25px 5px;
+      margin: 5px 0 15px;
+
+  }
+
+  .postAuthor {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+  }
+
+  .postAuthor img {
+      width: 35px;
+      border-radius: 50%;
+      margin-right: 10px;
+      margin-top: 5px;
+  }
+
+  .postAuthor h1 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #7a7979;
+
+  }
+
+  .postAuthor small {
+      display: block;
+      margin-bottom: -2px;
+  }
+
+  .post p {
+      font-size: 14px;
+      margin-bottom: 15px;
+  }
+
+  .fa-thumbs-up {
+      color: rgb(182, 182, 201);
+  }
+
+  .fa-heart {
+      color: red;
+
+  }
+
+  .fa-hands-clapping {
+      color: #a657f1;
+  }
+
+  .postStats {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 6px;
+  }
+
+  .postStats div {
+      display: flex;
+      align-items: center;
+  }
+
+  .postStats i {
+      font-size: 18px;
+      margin-right: -5px;
+  }
+
+  .likedUsers {
+      margin-left: 10px;
+  }
+
+  .postActivity {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      font-size: 14px;
+      font-weight: 500;
+  }
+
+  .postActivity div {
+      display: flex;
+      align-items: center;
+  }
+
+  .postActivityUserIcon {
+      width: 32px;
+      border-radius: 50%;
+  }
+
+  .postActivity .fa-caret-down {
+      font-size: 22px;
+      margin-left: 5px;
+  }
+
+  .postActivityLink i{
+    margin-right:8px;
+    font-size:18px;
+  }
+
+
+
+  /*--------------PROFILE PAGE-------------------*/
+
+  .profileMain{
+    flex-basis: 73%;
+  }
+
+  .profileSidebar{
+    flex-basis:25%;
+    align-self:flex-start;
+    position:sticky;
+    top:73px;
+  }
+
+  .profileContainer{
+    background:#fff;
+  }
+
+  .profileContainerInner{
+    padding:0 4% 10px;
+  }
+
+  .profilePic{
+    width:150px;
+    border-radius:50%;
+    margin-top:-75px;
+    padding:5px;
+    background:#fff;
+  }
+
+  .profileContainer h1{
+    font-size:28px;
+    font-weight:600;
+    color:#222;
+  }
+  .profileContainer b{
+    font-weight:500;
+  }
+
+  .profileContainer p{
+    margin-top:5px;
+  }
+
+  .profileContainer p a{
+    color:#1a83fa;
+    font-weight:500;
+  }
+
+  .mutualConnection{
+    display:flex;
+    align-items:center;
+    margin:20px 0;
+  }
+
+  .mutualConnection img{
+    width:50px;
+    border-radius:50%;
+    margin-right:5px;
+  }
+
+  .profileBtn{
+    margin:20px 0;
+  }
+  .profileBtn a{
+    display:inline-flex;
+    align-items:center;
+    background:#e4e6eb;
+    padding:6px 15px;
+    border-radius:4px;
+    margin-right:10px;
+  }
+
+  .profileBtn a i{
+    font-size:18px;
+    margin-right:5px;
+  }
+
+  .profileBtn .primaryBtn{
+    background:#1a83fa;
+    color:#fff;
+  }
+
+  .profileDescription{
+    background:#fff;
+    padding:20px 4% 30px;
+    margin:12px 0;
+
+  }
+
+  .profileDescription h2{
+    color:#333;
+    margin:10px 0 20px;
+    font-weight:600;
+  }
+  .seeMoreLink{
+    display:block;
+    text-align:right;
+    font-size:15px;
+  }
+
+  .profileDescRow{
+    display:flex;
+    align-items:flex-start;
+    margin:20px 0;
+  }
+  .profileDescRow img{
+    width:50px;
+    margin-right: 25px;
+    margin-top:5px;
+  }
+  .profileDescRow div{
+    width:100%;
+  }
+  .profileDescRow h3{
+    font-size:18px;
+    font-weight:600;
+    color:#333;
+  }
+
+  .profileDescRow b{
+    display:block;
+    font-weight:500;
+    font-size:15px;
+  }
+  .profileDescRow p{
+    margin-top:15px;
+  }
+  .profileDescRow hr{
+    border:0;
+    border-bottom: 1px solid #999;
+    margin-top:10px;
+  }
+
+  .experienceLink{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    padding-top:20px;
+    font-weight:500;
+  }
+
+  .experienceLink i{
+    margin-left:8px;
+  }
+
+  .skillsBtn{
+    display:inline-block;
+    margin:10px 5px;
+    padding:6px 18px;
+    border:1px solid #777;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:500;
+  }
+
+  .languageBtn{
+    display:inline-block;
+    margin:10px 5px;
+    padding:6px 18px;
+    background:#e4e6eb;
+    font-size:12px;
+    font-weight:500;
+  }
+
+  /*--------------PROFILE RIGHT SIDEBAR--------------------*/
+  .profileSidebar .sidebarAd{
+    margin:0;
+  }
+
+  .sidebarPeople{
+    background:#fff;
+    padding:15px 25px;
+    margin:12px 0;
+    font-size:12px;
+
+  }
+
+  .sidebarPeople h3{
+    font-size:16px;
+    font-weight:600;
+    margin:10px 0 20px;
+  }
+
+  .sidebarPeopleRow{
+    display:flex;
+    align-items:flex-start;
+    margin:6px 0;
+  }
+
+  .sidebarPeopleRow img{
+    width:40px;
+    border-radius:50%;
+    margin-right:8px;
+    margin-top:5px;
+  }
+
+  .sidebarPeopleRow h2{
+    font-weight:500;
+    font-size:16px;
+  }
+  .sidebarPeopleRow a{
+    display:inline-block;
+    margin:10px 0;
+    padding:5px 25px;
+    border:1px solid #5f5f5f;
+    border-radius:30px;
+    font-weight:500;
+  }
+
+  .footer{
+    padding:0 6% 30px;
+  }
+
+  .footer .sidebarUsefulLinks{
+    text-align:left;
+    padding:0;
+  }
+
+  .footer .copyRight{
+    justify-content:flex-start;
+  }
+
+  #showMoreLink{
+    display:none;
+  }
+
+  /*------------------MEDIA QUERY FOR SMALL SCREEN---------*/
+
+  @media only screen and (max-width:600px){
+    .searchBox{
+        background: transparent;
+        width:auto;
+        padding:0;
+
+    }
+    .searchBox input{
+        width:0;
+        padding:0;
+    }
+    .navbarCenter ul li a span{
+        display: none;
+    }
+
+    .navbarCenter ul li a {
+        padding-right:0;
+        margin:5px;
+    }
+
+    .navProfileImage{
+        width:30px;
+
+    }
+
+    .container{
+        padding:15px 3%;
+    }
+    .leftSideBar,
+    .rightSideBar{
+        flex-basis: 100%;
+        position:relative;
+        top:unset;
+
+    }
+
+    .profileMain{
+        flex-basis:100%;
+    }
+
+    .postStats div{
+        margin:2px 0;
+    }
+    .postActivityLink span{
+        display:none;
+    }
+
+    .postActivityLink img{
+        margin-right:0;
+    }
+    .profileMain,
+    .profileSidebar{
+       flex-basis:100%; 
+    }
+
+    .profileContainer{
+        font-size:14px;
+    }
+
+    .profilePic{
+        width:100px;
+        margin-top:-50px;
+    }
+
+   .postimg{
+    width:100%;
+   }
+   .navBar{
+    position:inherit;
+}
+
+.profileMenuWrap{
+    top:60px;
+}
+
+
+  }
+
+  @media screen and (max-width:1136px){
+    .profileMain,.navBar{
+        flex-basis:100%;
+    }
+    .profileMain,
+    .profileSidebar{
+       flex-basis:100%; 
+    }
+
+    .profileContainer{
+        font-size:14px;
+    }
+
+    .profilePic{
+        width:100px;
+        margin-top:-50px;
+    }
+    .profileDescription{
+        font-size:14px;
+    }
+    #showMoreLink{
+        display:block;
+        width:fit-content;
+        margin:10px auto;
+        font-size:14px;
+        cursor:pointer;
+    }
+    .container{
+        display:block;
+        padding:15px 6%;
+        margin:10px auto;
+        font-size:14px;
+        cursor:pointer;
+    }
+
+    .leftSideBar{
+        position: inherit;
+    }
+    .postimg{
+        width:100%;
+       }
+
+    .navBar{
+        position:inherit;
+    }
+
+    .sidebarActivity{
+        display:none;
+    }
+
+    .sidebarActivity.active{
+        display:block;
+    }
+    .profileMenuWrap{
+        top:60px;
+    }
+    
+
+  }
+
+  

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="strict-origin" />
+    <!-- Pro CDN references and other meta, styling, and scripty bits -->
+    <title>Linkedin Clone in JavaScript HTML & CSS</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <nav class="navBar">
+      <div class="navbarLeft">
+        <a href="index.html" class="logo">
+          <img src="images/logo.png" alt="" />
+        </a>
+
+        <div class="searchBox">
+          <i class="fa fa-search fa-xs"></i>
+          <input type="text" placeholder="Search" />
+        </div>
+      </div>
+      <div class="navbarCenter">
+        <ul>
+          <li>
+            <a href="linkedinclone.html" class="activeLink" target="_blank">
+              <img src="images/home.png" alt="" />
+              <span>Home</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="linkedinclone.html"  target="_blank">
+              <img src="images/network.png" alt="" />
+              <span>My Network</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="linkedinclone.html"  target="_blank">
+              <img src="images/jobs.png" alt="" />
+              <span>Jobs</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="linkedinclone.html"  target="_blank">
+              <img src="images/message.png" alt="" />
+              <span>Messaging</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="linkedinclone.html"  target="_blank">
+              <img src="images/notification.png" alt="" />
+              <span>Notifications</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="navbarRight">
+        <div class="online">
+          <img src="images/user1.jpg" alt="" class="navProfileImage" />
+        </div>
+      </div>
+      <!------------PROFILE DROP DOWN MENU---------------------->
+      <div class="profileMenuWrap">
+        <div class="profileMenu">
+          <div class="userInfo">
+            <img src="images/user1.jpg" alt="" />
+            <div>
+              <h3>Rohan Sharma</h3>
+              <a href="linkedinclone.html">See your profile</a>
+            </div>
+          </div>
+
+          <hr />
+
+          <a href="linkedinclone.html" target="_blank" class="profileMenuLink">
+            <i class="far fa-comment-edit"></i>
+            <p>Give Feedback</p>
+            <span>></span>
+          </a>
+
+          <a href="linkedinclone.html" target="_blank" class="profileMenuLink">
+            <i class="fas fa-wrench"></i>
+            <p>Settings & Privacy</p>
+            <span>></span>
+          </a>
+
+          <a href="linkedinclone.html" target="_blank" class="profileMenuLink">
+            <i class="fas fa-question-circle"></i>
+            <p>Help & Support</p>
+            <span>></span>
+          </a>
+
+          <a href="linkedinclone.html" target="_blank" class="profileMenuLink">
+            <i class="fas fa-moon"></i>
+            <p>Display & Access</p>
+            <span>></span>
+          </a>
+
+          <a href="linkedinclone.html" target="_blank" class="profileMenuLink">
+            <i class="fas fa-sign-out-alt"></i>
+            <p>Logout</p>
+            <span>></span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!---------------------------NAVBAR CLOSE----------------------------->
+
+    <div class="container">
+      <div class="profileMain">
+        <div class="profileContainer">
+          <img src="images/coverpic.png" alt="" style="width: 100%" />
+          <div class="profileContainerInner">
+            <img src="images/user1.jpg" alt="" class="profilePic" />
+            <h1>Rohan Sharma</h1>
+            <b>Web Developer at The Muse</b>
+            <p>Mumbai,India &middot; <a href="#">Contact Info</a></p>
+
+            <div class="mutualConnection">
+              <img src="images/user2.jpg" alt="" />
+              <span>1 mutual connection: Prajakta Mukherjee</span>
+            </div>
+
+            <div class="profileBtn">
+              <a href="#" class="primaryBtn"
+                ><i class="far fa-link fa-pulse"></i>Connect</a
+              >
+              <a href="#"><i class="fa-solid fa-message fa-beat-fade"></i>Message</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="profileDescription">
+          <h2>About</h2>
+          <p>
+            The public is more familiar with bad design than good design. It is,
+            in effect, conditioned to prefer bad design, because that is what it
+            lives with. The new becomes threatening, the old reassuring.
+
+            <a href="#" class="seeMoreLink">See More...</a>
+          </p>
+        </div>
+
+        <div class="profileDescription">
+          <h2>Experience</h2>
+          <div class="profileDescRow">
+            <img src="images/themuselogo.jpeg" alt="" />
+            <div>
+              <h3>Front End Developer</h3>
+              <b>The Muse &middot; Full Time April 2020 - Present 2.5 years</b>
+              <p>
+                Worked as a part of Front-End Engineering (FEE) Center Of
+                Excellence team which focuses on delivering class apart
+                modernized UI design for various Unisys products by following
+                Keep It Simple, Stupid (KISS) principle. Transformed from being
+                a fresher to leading a group of developers in FEE Technology and
+                Clean Coding Principles. Worked on enhancement & UI
+                modernization of various legacy Unisys products. Worked on the
+                development of user interface for Stealth(identity) from
+                scratch. Created Server-Side Rendering Template Engine Framework
+                for Unisys products.<br />
+                Tools & Technology: HTML5, CSS3, Javascript, JQuery, Bootstrap4,
+                Node JS, AJAX, Webpack<br />
+                <b> Web Server: </b>NGINX, Node webserver. <br />
+                <b>IDE:</b> Visual Studio Code<br />
+                <b>Agile project management tool:</b> JIRA <br />
+                <b>Source Code Management tools:</b> Git, Bitbucket, Sourcetree.
+              </p>
+              <hr />
+            </div>
+          </div>
+
+          <div class="profileDescRow">
+            <img src="images/microsoft.png" alt="" />
+            <div>
+              <h3>Full Stack Developer</h3>
+              <b
+                >Microsoft &middot; Full Time January 2015 - March 2020 5
+                years</b
+              >
+              <p>
+                Working closely with other team members to plan, design and
+                develop robust solutions in a timely manner Modifying existing
+                software to correct errors, upgrade interfaces and improve
+                performance Writing and maintaining extensible code in a team
+                environment Consulting weekly with customers on project status,
+                proposals and technical issues Worked well in a team setting,
+                providing support and guidance. Acted as a team leader in group
+                projects, delegating tasks and providing feedback. Managed time
+                efficiently in order to complete all tasks within deadlines.
+                Cultivated interpersonal skills by building positive
+                relationships with others. Demonstrated respect, friendliness
+                and willingness to help wherever needed.
+              </p>
+              <hr />
+            </div>
+          </div>
+
+          <div class="profileDescRow">
+            <img src="images/slack.png" alt="" />
+            <div>
+              <h3>Associate Engineer</h3>
+              <b
+                >Slack Inc. &middot; Full Time June 2013 - December 2014 1.6
+                years</b
+              >
+              <p>
+                Throughout my journey in this team, I have took ownership of two
+                products of totally different domains ranging from a system
+                component developed in Meta Assembly Language to a Middleware
+                J2EE component (JCA) for Distributed Transaction Processing
+                developed in Java.
+              </p>
+            </div>
+          </div>
+          <hr>
+          <a href="#" class="experienceLink">Show all 6 experiences
+            <i class="far fa-arrow-right fa-beat-fade" style="color: #1a83fa;"></i>          </a>
+        </div>
+
+        <div class="profileDescription">
+          <h2>Education</h2>
+          <div class="profileDescRow">
+            <img src="images/uofR.png" alt="">
+            <div>
+              <h3>University of Regina</h3>
+              <b>MSc. Computer Science</b>
+              <b>2012-2014</b>
+              <hr>
+            </div>
+          </div>
+
+          <div class="profileDescRow">
+            <img src="images/north.png" alt="">
+            <div>
+              <h3>NorthEast Sikkin University</h3>
+              <b>BSc. Computer Science</b>
+              <b>2009-2012</b>
+              <hr>
+            </div>
+          </div>
+          <div class="profileDescRow">
+            <img src="images/stanford.png" alt="">
+            <div>
+              <h3>Stanford University</h3>
+              <b>Senior High School</b>
+              <b>2002-2012</b>
+            </div>
+          </div>
+        </div>
+
+        <div class="profileDescription">
+          <h2>Skills</h2>
+          <a href="#" class="skillsBtn">Leadership</a>
+          <a href="#" class="skillsBtn">Jquery</a>
+          <a href="#" class="skillsBtn">JavaScript</a>
+          <a href="#" class="skillsBtn">Node JS</a>
+          <a href="#" class="skillsBtn">React JS</a>
+          <a href="#" class="skillsBtn">Angular</a>
+          <a href="#" class="skillsBtn">UI/UX</a>
+          <a href="#" class="skillsBtn">PHP</a>
+          <a href="#" class="skillsBtn">TypeScript</a>
+          <a href="#" class="skillsBtn">SQL</a>
+          <a href="#" class="skillsBtn">ASP.NET</a>
+          <a href="#" class="skillsBtn">Communication</a>
+          <a href="#" class="skillsBtn">Development</a>
+          <a href="#" class="skillsBtn">Web Design</a>
+          <a href="#" class="skillsBtn">Enterprenourship</a>
+          <a href="#" class="skillsBtn">Planning</a>
+
+
+
+
+
+        </div>
+
+        <div class="profileDescription">
+          <h2>Languages</h2>
+          <a href="#" class="languageBtn">English</a>
+          <a href="#" class="languageBtn">Punjabi</a>
+          <a href="#" class="languageBtn">Hindi</a>
+          <a href="#" class="languageBtn">Sanskrit</a>
+
+        </div>
+      </div>
+
+      <!-----------PROFILE SIDEBAR--------->
+      <div class="profileSidebar">
+        <div class="sidebarAd">
+          <small>Ad &middot; &middot; &middot;</small>
+          <p>Where ideas meet execution.</p>
+          <div>
+            <img src="images/user1.jpg" alt="" />
+            <img
+              src="images/saskpolylogo.jpg"
+              alt=""
+              style="width: 90px; height: 60px"
+            />
+          </div>
+
+          <b>Get the best out of your knowledge with Saskpolytech</b>
+          <a href="#" class="addLink">Learn More</a>
+        </div>
+
+        <div class="sidebarPeople">
+          <h3>People you may know</h3>
+          <div class="sidebarPeopleRow">
+            <img src="images/user-4.png" alt="">
+            <div>
+              <h2>
+                Martha Stallone
+              </h2>
+              <p>
+                Full Stack Developer at Microsoft
+              </p>
+              <a href="#">Connect</a>
+            </div>
+          </div>
+
+          <div class="sidebarPeopleRow">
+            <img src="images/user-3.png" alt="">
+            <div>
+              <h2>
+                April Jackson
+              </h2>
+              <p>
+                BackEnd Developer at UofR
+              </p>
+              <a href="#">Connect</a>
+            </div>
+          </div>
+
+          <div class="sidebarPeopleRow">
+            <img src="images/user-1.png" alt="">
+            <div>
+              <h2>
+                Steve Greg
+              </h2>
+              <p>
+                Data Engineer at Walmart.
+              </p>
+              <a href="#">Connect</a>
+            </div>
+          </div>
+
+          <div class="sidebarPeopleRow">
+            <img src="images/user-2.png" alt="">
+            <div>
+              <h2>
+                Samuel Tony
+              </h2>
+              <p>
+                Devops Engineer at Google
+              </p>
+              <a href="#">Connect</a>
+            </div>
+          </div>
+
+          <div class="sidebarPeopleRow">
+            <img src="images/user-5.png" alt="">
+            <div>
+              <h2>
+                Benjamin Leo
+              </h2>
+              <p>
+                Backend Developer at Alibaba
+              </p>
+              <a href="#">Connect</a>
+            </div>
+          </div>
+
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="sidebarUsefulLinks">
+        <a href="#">About</a>
+        <a href="#">Advertising</a>
+        <a href="#">Get the App</a>
+        <a href="#">Accessibility</a>
+        <a href="#">Help Center</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">More</a>
+
+        <div class="copyRight">
+          <img src="images/logo.png" alt="" />
+          <p>Linkedin &#169;  IshaDesaiCrowthers 2023. All rights reserved</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

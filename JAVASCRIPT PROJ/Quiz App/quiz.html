@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"  />
+
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,500;1,700&display=swap");
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+:root{
+    --light-pink-color:#ab81ab;
+    --light-color:#fff;
+    --dark-color:#000;
+    --grey-color:#e8e4e4;
+    --transition:all 300ms ease-in-out;
+
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*----Centering-----*/
+
+body{
+    font-family: 'Poppins', sans-serif;
+    min-height:100vh;
+    color:var(--dark-color);
+    background-color:var(--grey-color);
+
+}
+.wrapper{
+    background-color: var(--light-color);
+    padding: 1.5rem 4rem 3rem 4rem;
+    width:600px;
+    height:680px;
+    border-top-left-radius:1.5rem;
+    border-bottom-right-radius:1.5rem;
+    position:relative;
+    box-shadow: 0 4px 6px rgb(0 0 0/10%), 0 1px 3px rgb(0 0 0/10%);
+
+}
+
+.quiz-title{
+    text-align: center;
+    font-size: 2rem;
+
+}
+
+.quiz-score{
+    text-align:right;
+    font-weight: 600;
+    font-size:1.2rem;
+    border:5px solid var(--grey-color);
+    margin-bottom: 1rem;
+    font-weight: bold;
+    width: 100px;
+    height:50px;
+    margin:.5rem auto;
+    color:var(--light-pink-color);
+
+}
+
+.quiz-question{
+    font-size:1.2rem;
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+}
+.quiz-question .category{
+    font-size:0.9rem;
+    font-weight: 500;
+    background-color: var(--light-pink-color);
+    color:var(--light-color);
+    padding: .2rem .4rem;
+    border-radius: .2rem;
+    margin-top: 0.5rem;
+    display: inline-block;
+}
+
+.quiz-options{
+    list-style-type: none;
+    margin:1rem 0;
+
+}
+.quiz-options li{
+    border-radius: 0.5rem;
+    font-weight: 600;
+    margin: .7rem 0;
+    padding:.4rem 1.2rem;
+    cursor:pointer;
+    border:3px solid var(--light-pink-color);
+    background-color: var(--light-pink-color);
+    color:var(--light-color);
+    box-shadow:0 4px 0 0 #8c6b8c;
+    transition: var(--transition);
+
+}
+.quiz-options li:hover{
+    background-color: var(--grey-color);
+    color:var(--dark-color);
+    border-color: var(--grey-color);
+    box-shadow: 0 4px 0 0 #bbb;
+}
+.quiz-options li:active{
+    transform: scale(0.97);
+}
+
+.selected{
+    background-color: var(--grey-color)!important;
+    color:var(--dark-color)!important;
+    border-color: var(--grey-color)!important;
+    box-shadow:0 4px 0 0 #bbb!important;
+}
+.quiz-foot button{
+    bordeR:none;
+    border-radius: 0.5rem;
+    outline:none;
+    font-family: 'Poppins',sans-serif;
+
+    font-size:1.2rem;
+    font-weight:600;
+    padding:.5rem 1rem;
+    margin:0 auto;
+    text-transform: uppercase;
+    cursor:pointer;
+    display:block;
+    background-color: var(--grey-color);
+    color:var(--dark-color);
+    letter-spacing: 2px;
+    transition:var(--transition);
+    box-shadow: 0 4px 0 0 #bbb;
+
+}
+.quiz-foot button:hover{
+    background-color: #edb3e4;
+    box-shadow: 0 4px 0 0 #a7a7a7;
+}
+.quiz-foot button:active{
+    transform: scale(0.95);
+}
+
+
+#play-again{
+    display: none;
+}
+
+/*RESULTS STYLING*/
+#result{
+    padding: .7rem 0;
+    text-align:center;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+#result i{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+    background-color: var(--light-pink-color);
+    color:var(--light-color);
+}
+
+@media(max-width:678px){
+
+    .quiz-title{
+        font-size:1.6rem;
+    }
+    .wrapper{
+        margin:3rem 0;
+        width:90%;
+        padding:1.5rem 1rem 3rem 1rem;
+        border-top-left-radius:0;
+        border-bottom-right-radius:0;
+
+    }
+    .quiz-foot button{
+        font-size:1rem;
+    }
+
+
+
+}
+
+    </style>
+
+    <script src="/Portfolio/JAVASCRIPT PROJ/Quiz App/script.js" defer></script>
+
+</head>
+<body class="flex">
+
+    <div class="wrapper">
+        <div class="quiz-container">
+            <div class="quiz-head">
+                <h1 class="quiz-title">
+                    Quiz Game
+                </h1>
+                <div class="quiz-score flex">
+                    <span id="correct-score">0</span> /
+                    <span id="total-question">10</span>
+                </div>
+            </div>
+
+            <div class="quiz-body">
+                <h2 class="quiz-question" id="question"><!-- What is the full form of HTTP?<br><span class="category">Geogrophy</span>--></h2>
+                <ul class="quiz-options">
+                  <!--  <li>1. Hyper text transfer package</li>
+                    <li>1. Hyper text transfer package</li>
+                    <li>1. Hyper text transfer package</li>
+                    <li>1. Hyper text transfer package</li>-->
+
+                </ul>
+
+                <div id="result"> 
+                    <!--Result will be displayed here-->
+
+                </div>
+
+            </div>
+
+            <div class="quiz-foot">
+                <button type="button" id="check-answer">Check Answer</button>
+                <button type="button" id="play-again">Play Again</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        //https://opentdb.com/api.php?amount=10&category=11&difficulty=hard&type=multiple
+
+
+const question=document.getElementById('question');
+const options=document.querySelector('.quiz-options');
+let correctAnswer="", correctScore=askedCount = 0, totalQuestion=10;
+const _correctScore= document.getElementById('correct-score');
+const _totalQuestion=document.getElementById('total-question');
+const checkButton=document.getElementById('check-answer');
+const playagainButton=document.getElementById('play-again');
+const result=document.getElementById('result');
+
+
+//event listeners 
+function eventListeners(){
+    checkButton.addEventListener('click', checkAnswer);
+    playagainButton.addEventListener('click', restartQuiz);
+}
+
+
+document.addEventListener('DOMContentLoaded',()=>{
+    loadQuestion();
+    eventListeners();
+    totalQuestion.textContent = totalQuestion;
+    correctScore.textContent=correctScore;
+
+});
+
+async function loadQuestion(){
+    const Apiurl='https://opentdb.com/api.php?amount=1&difficulty=hard&type=multiple';
+    const result=await fetch(`${Apiurl}`);
+    const data=await result.json();
+    //console.log(data);
+    showQuestion(data.results[0]);
+
+    result.innerHTML="";
+}
+
+//display question and options
+function showQuestion(data){
+    checkButton.disabled=false;
+    //console.log(data);
+     correctAnswer=data.correct_answer;
+   // console.log(correctAnswer);
+    let incorrectAnswer=data.incorrect_answers;
+    let optionsList=incorrectAnswer;
+    optionsList.splice(Math.floor(Math.random() * (incorrectAnswer.length + 1)), 0, correctAnswer);
+   // console.log(optionsList);
+   // console.log(correctAnswer);
+
+   question.innerHTML=`${data.question}<br><span class="category">${data.category}</span>`;
+   options.innerHTML=`${optionsList.map((option, index) => 
+    `<li>
+    ${index + 1}. <span>${option}</span>
+    
+    
+    </li>`
+   ).join('')}`;
+
+    selectOption();
+
+}
+
+//options selection
+function selectOption(){
+    options.querySelectorAll('li').forEach((option) => {
+        option.addEventListener('click', ()=>{
+           // console.log("hello");
+            if(options.querySelector('.selected')){
+                const activeOption = options.querySelector('.selected');
+                activeOption.classList.remove('selected');
+            }
+            option.classList.add('selected');
+        });
+    });
+
+    console.log(correctAnswer);
+}
+
+
+//answer checking 
+
+function checkAnswer(){
+    //console.log("hello");
+    checkButton.disabled=true;
+    if(options.querySelector('.selected')){
+        let selectedAnswer = options.querySelector('.selected span').textContent;
+        //console.log(selectedAnswer);
+        if(selectedAnswer.trim() == HTMLDecode(correctAnswer)){
+            correctScore++;
+            result.innerHTML=`<p>
+            <i class="fas fa-check"></i>Correct Answer! 
+            
+            
+            
+            </p>`;
+        } else{
+            result.innerHTML=`<p>
+            <i class="fas fa-times"></i>InCorrect Answer </p>
+            
+            <p><small><b>Correct Answer is :<b> ${correctAnswer}</b></small>
+            
+            </p>`;
+        }
+        checkCount();
+    }else{
+        result.innerHTML=`<p>
+        <i class="fas fa-question"></i>Please select an option!
+
+        
+        
+        
+        </p>`;
+        checkButton.disabled=false;
+    }
+}
+
+//to convert HTML entities into normal text of correct answer if there is any 
+
+function HTMLDecode(textString){
+
+    let doc = new DOMParser().parseFromString(textString,"text/html");
+    return doc.documentElement.textContent;
+
+}
+
+function checkCount(){
+    askedCount++;
+    setCount();
+    if(askedCount == totalQuestion){
+       // alert("hello");
+       result.innerHTML +=`<p>
+      Your score is : ${correctScore} </p>`;
+
+      playagainButton.style.display="block";
+      checkButton.style.display="none";
+    }else{
+        setTimeout(()=>{
+            loadQuestion();
+        },300);
+    }
+}
+
+function setCount(){
+    _totalQuestion.textContent= totalQuestion;
+    _correctScore.textContent = correctScore;
+
+
+}
+
+function restartQuiz(){
+    correctScore = askedCount = 0;
+    playagainButton.style.display="none";
+    checkButton.style.display="block";
+    checkButton.disabled=false;
+    result.innerHTML="";
+    setCount();
+    loadQuestion();
+}
+//loadQuestion();
+    </script>
+</body>
+</html>
